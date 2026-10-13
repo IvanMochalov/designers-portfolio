@@ -1,0 +1,435 @@
+{
+  "profile": {
+    "name": "Artyom Kashkarov",
+    "summary": "Product Designer turning complex workflows, data, and business logic into clear, intuitive interfaces.",
+    "avatar": "assets/portrait.png",
+    "email": "kashkarov.artyom@gmail.com",
+    "scheduleUrl": "",
+    "tagline": "Always curious about how things work —\nand how to make them work better.",
+    "wordmark": "assets/wordmark.svg",
+    "copyright": "© 2026 Artyom · Product Designer",
+    "social": [
+      { "label": "LinkedIn", "icon": "assets/linkedin.svg", "href": "" },
+      { "label": "Telegram", "icon": "assets/telegram.svg", "href": "" }
+    ]
+  },
+  "ui": {
+    "nav": [
+      { "label": "Projects", "to": "/" },
+      { "label": "About", "to": "/about" },
+      { "label": "Resume", "to": "/resume" }
+    ],
+    "locale": "RU",
+    "latestWork": "My latest work",
+    "letsChat": "Let’s chat",
+    "copied": "Copied!",
+    "schedule": "Schedule a call",
+    "linksTitle": "Links",
+    "contactTitle": "Contact",
+    "exploreMore": "Explore more",
+    "menuOpen": "Menu",
+    "menuClose": "Close",
+    "metaLabels": {
+      "role": "Role",
+      "timeline": "Timeline",
+      "team": "Team",
+      "platform": "Platform"
+    },
+    "notFound": "This project is not in the portfolio yet.",
+    "backHome": "Back to projects"
+  },
+  "experiments": [],
+  "about": {
+    "portrait": "assets/about-portrait-tone.png",
+    "portraitAlt": "Artyom Kashkarov",
+    "heading": "Hello, I'm Artyom.",
+    "headingMuted": "Product Designer for complex digital products.",
+    "paragraphs": [
+      "My journey began with architecture. I wanted to design buildings, but over time I realized that creating digital spaces where people solve real problems is much more interesting.",
+      "I have been working in interface design for over five years. For the last two years, I have been focused on digital services for the construction industry: designing complex user scenarios, analytical systems, and tools for handling large volumes of data.",
+      "I enjoy finding order in complexity. Understanding processes, asking questions, eliminating the unnecessary, and turning convoluted logic into clear interfaces.",
+      "Currently, I am actively exploring AI capabilities, experimenting with new tools, and looking for ways to make the process of creating digital products faster and more efficient."
+    ],
+    "interestsTitle": "What I’m into",
+    "interestsMuted": "right now",
+    "interests": [
+      { "label": "AI tools", "icon": "assets/interest-ai.png" },
+      { "label": "Minimal interfaces", "icon": "assets/interest-minimal.png" },
+      { "label": "Football", "icon": "assets/interest-football.png" },
+      { "label": "Tennis", "icon": "assets/interest-tennis.png" },
+      { "label": "Techno music", "icon": "assets/interest-techno.png" },
+      { "label": "Long walks", "icon": "assets/interest-walks.png" },
+      { "label": "Gym", "icon": "assets/interest-gym.png" },
+      { "label": "Ramen", "icon": "assets/interest-ramen.png" },
+      { "label": "Complex tasks", "icon": "assets/interest-complex.png" },
+      { "label": "Design systems", "icon": "assets/interest-systems.png" },
+      { "label": "Future of technology", "icon": "assets/interest-future.png" }
+    ],
+    "valuesTitle": "The values",
+    "valuesMuted": "behind my work",
+    "values": [
+      {
+        "title": "Systems Thinking",
+        "body": "I look at the product as a whole, considering the relationships between elements, users, and processes."
+      },
+      {
+        "title": "Simplicity in Complexity",
+        "body": "I transform complex processes into clear and user-friendly interfaces, removing everything unnecessary."
+      },
+      {
+        "title": "Meaningful Design",
+        "body": "Every decision I make has a purpose and should bring real benefits to users and the business."
+      },
+      {
+        "title": "Continuous Development",
+        "body": "I study new technologies, experiment, and seek more effective ways to solve problems."
+      }
+    ],
+    "pathTitle": "From",
+    "pathMuted": "blueprints to pixels",
+    "path": [
+      { "src": "assets/path-drawing.png", "alt": "Pencil drawing over a blueprint", "caption": "Drawing" },
+      { "src": "assets/path-graphic.png", "alt": "Tablet with a graphic design sketch", "caption": "Graphic Design" },
+      { "src": "assets/path-ux.png", "alt": "Design system file in an editor", "caption": "UX/UI and Design systems" },
+      { "src": "assets/path-systems.png", "alt": "Screens of a digital product", "caption": "Complex digital systems" }
+    ]
+  },
+  "resume": {
+    "jobs": [
+      {
+        "role": "Product Designer",
+        "company": "Moscow General Plan Institute",
+        "dates": "June 2025 - now",
+        "location": "Remote",
+        "icon": "assets/logo-mgpi.svg",
+        "body": "Designed and built a design system from scratch for Moscow's Urban Development Complex, establishing a unified standard across its digital services.\n\nDesign complex digital products and workflows, transforming technical requirements into intuitive, scalable interfaces."
+      },
+      {
+        "role": "Product Designer",
+        "company": "Webinfra",
+        "dates": "June 2023 - 2026",
+        "location": "Part time",
+        "icon": "assets/logo-webinfra.svg",
+        "body": "Designed user-centered interfaces for B2B and B2C digital products, focusing on usability, functionality, and visual consistency.\n\nTranslated complex requirements into intuitive user flows, interactive prototypes, and scalable UI solutions."
+      },
+      {
+        "role": "Graphic Designer",
+        "company": "Department of Urban Planning Policy",
+        "dates": "June 2023 - 2025",
+        "location": "Moscow",
+        "icon": "assets/logo-urban.svg",
+        "body": "Designed presentations and visual materials for government and urban development projects, making complex information clear and accessible.\n\nCreated infographics, data visualizations, and structured layouts to communicate key ideas effectively."
+      },
+      {
+        "role": "Web Designer",
+        "company": "SSL Dragon",
+        "dates": "August 2021 - 2023",
+        "location": "San Jose, Remote",
+        "icon": "assets/logo-ssldragon.svg",
+        "body": "Designed responsive websites and landing pages, combining usability with modern visual design.\n\nCreated custom illustrations and graphic assets to establish a consistent visual identity across digital experiences."
+      }
+    ],
+    "toolsTitle": "Tools",
+    "toolsMuted": "powering my work",
+    "tools": [
+      { "name": "Figma", "detail": "UI Design", "icon": "assets/tool-figma.svg" },
+      { "name": "Instagram", "detail": "Scrolling Reels", "icon": "assets/tool-instagram.svg" },
+      { "name": "XMind", "detail": "Brainstorming, workshops", "icon": "assets/tool-xmind.png", "iconCrop": true },
+      { "name": "Claude", "detail": "Ideation, prototyping", "icon": "assets/tool-claude.svg" },
+      { "name": "Perplexity", "detail": "Search", "icon": "assets/tool-perplexity.svg" },
+      { "name": "Framer", "detail": "Web design, templates", "icon": "assets/tool-framer.svg" }
+    ],
+    "skillsTitle": "Skills",
+    "skills": [
+      "Product thinking",
+      "UX research",
+      "Interaction design",
+      "Design systems",
+      "Prototyping",
+      "User flows",
+      "Usability testing",
+      "Visual design",
+      "Information architecture",
+      "System Thinking",
+      "Design Handoff"
+    ],
+    "educationTitle": "Education",
+    "education": [
+      {
+        "title": "Moscow State University of Civil Engineering",
+        "dates": "2018 – 2022",
+        "location": "Moscow",
+        "lines": [
+          "Faculty: Institute of Hydraulic and Energy Construction",
+          "Department: Construction of Thermal and Nuclear Energy Facilities",
+          "Specialty: 08.03.01 Construction"
+        ]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "slug": "crm-platform-for-managing-room-bookings",
+      "title": "CRM platform for managing room bookings",
+      "client": "",
+      "year": "2024",
+      "cover": "assets/project-crm-bg.png",
+      "screens": ["assets/project-crm-screen.png"],
+      "summary": "CRM for space operators: managing rooms, occupancy calendar, and analytics, all integrated into one workflow instead of dozens of spreadsheets and chats.",
+      "hero": { "screen": "assets/crm-hero.png" },
+      "brief": { "title": "Summary", "text": "If you're too lazy to read and scroll" },
+      "meta": {
+        "role": "Product Designer",
+        "timeline": "2024",
+        "team": "1 Designer",
+        "platform": "Web application"
+      },
+      "sections": [
+        {
+          "id": "overview",
+          "nav": "Overview",
+          "kicker": "Overview",
+          "heading": "Managing spaces in one system",
+          "paragraphs": [
+            "The operator manages dozens of spaces across several buildings. Previously, bookings were handled through spreadsheets and correspondence, leading to scheduling conflicts, fragmented data, and inefficient workflows. Frequent staff turnover added another challenge: new administrators required time-consuming training to handle everyday tasks."
+          ],
+          "insights": [
+            {
+              "heading": "The Impact",
+              "paragraphs": [
+                "A unified CRM was designed to bring bookings, calendars, resource management, and analytics into one place. Simplified workflows, intuitive navigation, and clear visual feedback were introduced to reduce manual work, prevent errors, and help new employees get started with minimal training."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "problem",
+          "nav": "Problem",
+          "kicker": "Problem",
+          "heading": "Manual bookings and a steep learning curve",
+          "paragraphs": [
+            "Information about spaces, clients, and requests was scattered across different sources. During calls, administrators had to manually check availability, clarify booking details, and monitor scheduling conflicts.",
+            "Frequent staff turnover made the situation worse. Each new employee needed training to understand the booking process, increasing operational costs and slowing down daily work."
+          ],
+          "insights": [
+            {
+              "heading": "Key Issues",
+              "points": [
+                { "title": "Scheduling conflicts", "text": "Rooms could be booked for overlapping times due to manual checks." },
+                { "title": "Fragmented data", "text": "Information about clients, spaces, and requests was spread across multiple sources." },
+                { "title": "Limited visibility", "text": "Administrators had to manually check occupancy and availability across buildings." },
+                { "title": "Complex approvals", "text": "Different employees participated in the same process but did not have a unified workspace." }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "analysis",
+          "nav": "Analysis",
+          "kicker": "Analysis",
+          "heading": "First, understand the logic, then design the interface.",
+          "paragraphs": [
+            "I started by analyzing booking scenarios, user roles, and existing interface solutions. It was important to determine what data was needed at each stage and where errors might occur.",
+            "I focused primarily on calendars, booking statuses, resource management, and access control."
+          ],
+          "insights": [
+            {
+              "heading": "",
+              "figure": {
+                "src": "assets/crm-analysis.png",
+                "alt": "Booking flow analysis",
+                "fit": "contain",
+                "arrows": true
+              }
+            }
+          ]
+        },
+        {
+          "id": "architecture",
+          "nav": "Architecture",
+          "kicker": "Architecture",
+          "heading": "One booking connects all data",
+          "paragraphs": [
+            "I mapped out the sequence of actions from the incoming call to the booking confirmation. I focused on what data the administrator needs at each stage, where errors occur, and what actions can be simplified."
+          ],
+          "insights": [
+            {
+              "heading": "",
+              "figure": {
+                "src": "assets/crm-architecture.png",
+                "alt": "Booking architecture diagram",
+                "fit": "contain"
+              }
+            }
+          ]
+        },
+        {
+          "id": "solutions",
+          "nav": "Solutions",
+          "kicker": "Solutions",
+          "paragraphs": [],
+          "insights": [
+            {
+              "heading": "Dashboard — everything that needs attention",
+              "paragraphs": [
+                "The administrator opens the day and immediately understands: what is confirmed, what is awaiting a decision, where conflicts are brewing. The dashboard answers questions before they are even asked."
+              ],
+              "figure": { "src": "assets/crm-dashboard.png", "alt": "CRM dashboard" }
+            },
+            {
+              "heading": "Visibility of occupancy",
+              "paragraphs": [
+                "All rooms on one timeline. Overlaps are visible before they become a problem, and available slots are immediately apparent, without mental calculations."
+              ],
+              "figure": { "src": "assets/project-crm-screen.png", "alt": "Room occupancy calendar" }
+            },
+            {
+              "heading": "A personalized view for everyone",
+              "paragraphs": [
+                "The administrator, manager, and leader see the system from their own perspective. Permissions define not only access but also what a person sees first — and what they don’t need to see at all."
+              ],
+              "figure": { "src": "assets/crm-roles.png", "alt": "Role-based CRM views" }
+            },
+            {
+              "heading": "Booking without unnecessary steps",
+              "paragraphs": [
+                "All data, checks, and additional services are consolidated into one scenario to facilitate quick and error-free bookings."
+              ],
+              "figure": {
+                "src": "assets/crm-booking.png",
+                "alt": "Booking flow",
+                "slides": ["assets/crm-booking.png", "assets/crm-analysis.png"],
+                "arrows": true
+              }
+            }
+          ]
+        },
+        {
+          "id": "takeaways",
+          "nav": "Takeaways",
+          "kicker": "Takeaways",
+          "heading": "A good interface helps focus on the client, not the system.",
+          "paragraphs": [
+            "The main goal was to reduce the number of manual checks and switches between sections. The administrator should quickly find the necessary information and book without losing the context of the conversation."
+          ],
+          "insights": []
+        }
+      ]
+    },
+    {
+      "slug": "construction-tender-management",
+      "title": "Construction tender management, all in one place",
+      "client": "",
+      "year": "2025",
+      "cover": "assets/project-tender-bg.png",
+      "screens": ["assets/project-tender-screen.png", "assets/project-tender-overlay.png"],
+      "summary": "A B2B platform designed to connect construction companies and contractors, bringing tender management, applications, and contractor selection into one unified workspace.",
+      "hero": {
+        "screen": "assets/project-tender-screen.png",
+        "overlay": "assets/project-tender-overlay.png",
+        "phone": "assets/tender-phone.png"
+      },
+      "brief": { "title": "Summary", "text": "If you're too lazy to read and scroll" },
+      "meta": {
+        "role": "Product Designer",
+        "timeline": "2025",
+        "team": "1 Designer",
+        "platform": "Web application"
+      },
+      "sections": [
+        {
+          "id": "overview",
+          "nav": "Overview",
+          "kicker": "Overview",
+          "heading": "Building a tender platform from scratch",
+          "paragraphs": [
+            "The project started with a business goal rather than an existing product to redesign. I was responsible for translating requirements into a complete user experience, defining the information architecture, user roles, and key workflows.",
+            "The main challenge was to make a complex, multi-stage tender process clear and manageable for everyone involved."
+          ],
+          "insights": [
+            {
+              "heading": "The Outcome",
+              "paragraphs": [
+                "A complete product experience was designed, including tender management, contractor profiles, applications, shortlisting, and selection workflows.",
+                "The platform was structured around different user roles, with clear navigation, transparent statuses, and tools for evaluating contractors."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "challenge",
+          "nav": "Challenge",
+          "kicker": "Challenge",
+          "heading": "Turning a complex process into a simple workflow",
+          "paragraphs": [
+            "With no existing product to redesign, the main challenge was to translate business requirements into a clear and scalable digital experience.",
+            "The platform needed to support multiple user roles, complex tender workflows, and large amounts of contractor data — without making everyday tasks unnecessarily complicated."
+          ],
+          "insights": [
+            {
+              "heading": "Key Challenges",
+              "points": [
+                { "title": "Multiple user roles", "text": "Different participants needed tailored workflows, permissions, and interfaces." },
+                { "title": "Complex tender lifecycle", "text": "Every stage, from tender creation to winner selection, required clear actions and statuses." },
+                { "title": "Contractor evaluation", "text": "Organizers needed an efficient way to review applications, compare candidates, and create shortlists." },
+                { "title": "Data & verification", "text": "Company information and external verification sources needed to be accessible within the evaluation process." }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "solutions",
+          "nav": "Solutions",
+          "kicker": "Solutions",
+          "paragraphs": [],
+          "insights": [
+            {
+              "heading": "End-to-End Tender Workflow",
+              "paragraphs": [
+                "Designed the entire tender lifecycle, from creating and publishing a tender to reviewing applications and selecting a winner. Clear stages, statuses, and actions help users navigate the process and understand what happens next."
+              ],
+              "figure": {
+                "src": "assets/tender-workflow.png",
+                "alt": "Tender workflow screens",
+                "arrows": true
+              }
+            },
+            {
+              "heading": "Role-Based Experience",
+              "paragraphs": [
+                "Designed tailored experiences for tender organizers and contractors, giving each role access to relevant tools and workflows. This keeps the interface focused on users' tasks without unnecessary complexity."
+              ],
+              "figure": {
+                "src": "assets/tender-roles.png",
+                "alt": "Role-based tender experience",
+                "arrows": true
+              }
+            },
+            {
+              "heading": "Contractor Evaluation",
+              "paragraphs": [
+                "Created a structured evaluation process that helps organizers review applications, compare contractors, verify company information, and build shortlists. All the information needed to make a decision is accessible within a single workflow."
+              ],
+              "figure": {
+                "src": "assets/tender-evaluation.png",
+                "alt": "Contractor evaluation",
+                "arrows": true
+              }
+            }
+          ]
+        },
+        {
+          "id": "conclusion",
+          "nav": "Conclusion",
+          "kicker": "Conclusion",
+          "heading": "From requirements to a cohesive product",
+          "paragraphs": [
+            "Designing this platform from scratch required more than creating interfaces. The key challenge was to structure complex business processes into a clear, consistent experience for different user roles.",
+            "The result is a scalable product design that connects tender management, contractor evaluation, and decision-making into one unified workflow."
+          ],
+          "insights": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+.cursor
+.idea
+.tanstack
+node_modules
+dist
+.DS_Store
+
