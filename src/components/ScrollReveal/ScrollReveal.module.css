@@ -9,7 +9,11 @@
   :global([data-reveal][data-in="1"]),
   :global(main > :not(.project-grid):not(.case-column)[data-in="1"]),
   :global(.case-column > [data-in="1"]) {
-    animation: 1.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    animation-name: global(content-in);
+    animation: content-in 1.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
+}
+
+@keyframes content-in {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: none; }
 }
