@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { IdentityBlock } from "../components/IdentityBlock";
 import { assetUrl } from "../data/assets";
-import { content } from "../data/content";
+import { useSite } from "../components/LocaleProvider";
 
 function AboutPage() {
-  const { about, profile, ui } = content;
+  const { about, profile, ui } = useSite().content;
   const chatHref = profile.scheduleUrl || `mailto:${profile.email}`;
 
   return (
@@ -17,11 +17,14 @@ function AboutPage() {
             <span>{about.heading}</span>
             <span className="muted">{about.headingMuted}</span>
           </h2>
-          {about.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
+          {about.paragraphs.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
           ))}
           <a className="button button-secondary" href={chatHref}>
             {ui.letsChat}
+            <span className="button-icon" aria-hidden="true">
+              <img src={assetUrl("assets/send.svg")} alt="" />
+            </span>
           </a>
         </div>
       </section>
@@ -31,7 +34,7 @@ function AboutPage() {
         </h2>
         <ul className="chip-row">
           {about.interests.map((interest) => (
-            <li key={interest.label} className="chip">
+            <li key={interest.icon} className="chip">
               <img src={assetUrl(interest.icon)} alt="" />
               {interest.label}
             </li>
@@ -44,8 +47,8 @@ function AboutPage() {
           <span className="muted">{about.valuesMuted}</span>
         </h2>
         <div className="values">
-          {about.values.map((value) => (
-            <article key={value.title}>
+          {about.values.map((value, index) => (
+            <article key={index}>
               <h3>{value.title}</h3>
               <p>{value.body}</p>
             </article>

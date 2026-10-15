@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { assetUrl } from "../data/assets";
-import { content } from "../data/content";
+import { useSite } from "./LocaleProvider";
 
 export function SiteFooter() {
   const [copied, setCopied] = useState(false);
-  const { profile, ui } = content;
+  const { profile, ui } = useSite().content;
   const scheduleHref = profile.scheduleUrl || `mailto:${profile.email}`;
 
   async function copyEmail() {
@@ -24,12 +24,12 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="footer-rule" />
       <div className="footer-grid">
-        <div>
+        <div className="footer-brand">
           <img className="wordmark" src={assetUrl(profile.wordmark)} alt="artyom.k" />
           <p className="footer-tagline">{profile.tagline}</p>
           <p className="copyright">{profile.copyright}</p>
         </div>
-        <div>
+        <div className="footer-links">
           <p className="footer-label">{ui.linksTitle}</p>
           {ui.nav.map((item) => (
             <Link key={item.to} to={item.to}>
@@ -37,7 +37,7 @@ export function SiteFooter() {
             </Link>
           ))}
         </div>
-        <div>
+        <div className="footer-contact">
           <p className="footer-label">{ui.contactTitle}</p>
           <button type="button" className="copy-email" onClick={() => void copyEmail()}>
             {copied ? ui.copied : profile.email}
@@ -46,11 +46,11 @@ export function SiteFooter() {
           <div className="socials">
             {profile.social.map((item) =>
               item.href ? (
-                <a key={item.label} href={item.href}>
+                <a key={item.icon} href={item.href}>
                   <img src={assetUrl(item.icon)} alt={item.label} />
                 </a>
               ) : (
-                <img key={item.label} src={assetUrl(item.icon)} alt={item.label} />
+                <img key={item.icon} src={assetUrl(item.icon)} alt={item.label} />
               ),
             )}
           </div>

@@ -54,11 +54,16 @@ export type CasePoint = {
   text: string;
 };
 
+export type CaseSlide = {
+  src: string;
+  fit?: "cover" | "contain";
+  align?: "left" | "center";
+};
+
 export type CaseFigure = {
   src: string;
   alt: string;
-  slides?: string[];
-  arrows?: boolean;
+  slides?: Array<string | CaseSlide>;
   fit?: "cover" | "contain";
 };
 
@@ -96,7 +101,7 @@ export type Project = {
   span?: "full";
   summary: string;
   hero: { screen: string; overlay?: string; phone?: string };
-  brief: { title: string; text: string };
+  brief: { title: string; text: string; items?: CasePoint[] };
   meta: ProjectMeta;
   websiteLabel?: string;
   websiteUrl?: string;
@@ -128,7 +133,7 @@ export type SiteContent = {
   };
   ui: {
     nav: NavItem[];
-    locale: string;
+    switchTo: string;
     latestWork: string;
     letsChat: string;
     copied: string;

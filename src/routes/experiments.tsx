@@ -1,14 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { IdentityBlock } from "../components/IdentityBlock";
 import { assetUrl } from "../data/assets";
-import { content } from "../data/content";
+import { useSite } from "../components/LocaleProvider";
 
 function ExperimentsPage() {
+  const { experiments } = useSite().content;
+
   return (
     <main>
       <IdentityBlock />
       <section className="masonry">
-        {content.experiments.map((item) => (
+        {experiments.map((item) => (
           <figure key={item.src}>
             <img src={assetUrl(item.src)} alt={item.alt} />
             <figcaption>{item.title}</figcaption>

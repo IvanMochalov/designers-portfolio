@@ -1,42 +1,35 @@
-import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { assetUrl } from "../data/assets";
-import { content } from "../data/content";
+import { LocaleButton, useSite } from "./LocaleProvider";
 
 export function SiteHeader() {
-  const [open, setOpen] = useState(false);
-  const { profile, ui } = content;
+  const { profile, ui } = useSite().content;
 
   return (
-    <header className="topbar">
-      <div className="avatar-frame">
-        <img src={assetUrl(profile.avatar)} alt="" />
+    <>
+      <div className="topbar">
+        <div className="avatar-frame">
+          <img src={assetUrl(profile.avatar)} alt="" />
+        </div>
       </div>
-      <button
-        type="button"
-        className="menu-button"
-        aria-expanded={open}
-        onClick={() => setOpen((current) => !current)}
-      >
-        {open ? ui.menuClose : ui.menuOpen}
-      </button>
-      <nav className={open ? "nav-pill is-open" : "nav-pill"} aria-label="Primary">
-        {ui.nav.map((item) => (
-          <Link
-            key={item.to}
-            to={item.to}
-            activeOptions={{ exact: true }}
-            className="nav-link"
-            activeProps={{ className: "nav-link is-active" }}
-            onClick={() => setOpen(false)}
-          >
-            {item.label}
-          </Link>
-        ))}
-      </nav>
-      <div className="locale-pill">
-        <span>{ui.locale}</span>
-      </div>
-    </header>
+      <header className="site-nav">
+        <nav className="nav-pill" aria-label="Primary">
+          {ui.nav.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              activeOptions={{ exact: true }}
+              className="nav-link"
+              activeProps={{ className: "nav-link is-active" }}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+        <div className="site-nav-end">
+          <LocaleButton />
+        </div>
+      </header>
+    </>
   );
 }

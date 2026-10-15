@@ -1,14 +1,16 @@
 import { useEffect, useRef, useState, type MouseEvent } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { assetUrl } from "../data/assets";
-import { content, projectBySlug, visibleSections } from "../data/content";
+import { projectBySlug, visibleSections } from "../data/content";
+import { LocaleButton, useSite } from "./LocaleProvider";
 
 function sectionScrollTop(node: HTMLElement) {
   const header = document.querySelector(".case-topbar");
   const headerHeight = header?.getBoundingClientRect().height ?? 0;
+  const stickyTop = header ? Number.parseFloat(getComputedStyle(header).top) || 0 : 0;
   const anchor = node.querySelector(".kicker") ?? node;
   const gap = 16;
-  return Math.max(0, window.scrollY + anchor.getBoundingClientRect().top - headerHeight - gap);
+  return Math.max(0, window.scrollY + anchor.getBoundingClientRect().top - stickyTop - headerHeight - gap);
 }
 
 function animateScroll(target: number, onDone: () => void) {
@@ -54,17 +56,20 @@ function animateScroll(target: number, onDone: () => void) {
 export function CaseHeader() {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
   const slug = pathname.split("/").filter(Boolean).at(-1) ?? "";
-  const project = projectBySlug(slug);
+  const { content } = useSite();
+  const project = projectBySlug(content.projects, slug);
+  const projectsLabel = content.ui.nav.find((item) => item.to === "/")?.label ?? "Projects";
   const sections = project ? visibleSections(project) : [];
+  const sectionKey = `${slug}:${sections.map((section) => section.id).join("|")}`;
   const [active, setActive] = useState(sections[0]?.id ?? "");
   const scrollLock = useRef(0);
   const syncActive = useRef<() => void>(() => {});
   const cancelScroll = useRef<(() => void) | null>(null);
 
   useEffect(() => {
-    const items = project ? visibleSections(project) : [];
-    const nodes = items
-      .map((section) => document.getElementById(section.id))
+    const ids = sectionKey.split(":").at(1)?.split("|").filter(Boolean) ?? [];
+    const nodes = ids
+      .map((id) => document.getElementById(id))
       .filter((node): node is HTMLElement => node !== null);
     if (nodes.length === 0) return;
 
@@ -75,7 +80,8 @@ export function CaseHeader() {
         setActive(nodes[nodes.length - 1].id);
         return;
       }
-      const marker = 150;
+      const header = document.querySelector(".case-topbar");
+      const marker = (header?.getBoundingClientRect().bottom ?? 80) + 24;
       let current = nodes[0].id;
       for (const node of nodes) {
         if (node.getBoundingClientRect().top <= marker) current = node.id;
@@ -101,7 +107,7 @@ export function CaseHeader() {
       window.removeEventListener("scroll", onScroll);
       if (frame !== 0) window.cancelAnimationFrame(frame);
     };
-  }, [project, slug]);
+  }, [sectionKey]);
 
   function onSectionClick(event: MouseEvent<HTMLAnchorElement>, id: string) {
     event.preventDefault();
@@ -122,9 +128,9 @@ export function CaseHeader() {
 
   return (
     <header className="case-topbar">
-      <Link to="/" className="back-pill">
+      <Link to="/" className="back-pill" aria-label={projectsLabel}>
         <img src={assetUrl("assets/arrow-left.svg")} alt="" />
-        Projects
+        <span className="back-label">{projectsLabel}</span>
       </Link>
       <nav className="nav-pill case-anchors" aria-label="Sections">
         {sections.map((section) => (
@@ -138,9 +144,7 @@ export function CaseHeader() {
           </a>
         ))}
       </nav>
-      <div className="locale-pill">
-        <span>{content.ui.locale}</span>
-      </div>
+      <LocaleButton />
     </header>
   );
 }

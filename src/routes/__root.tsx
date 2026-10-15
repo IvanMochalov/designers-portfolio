@@ -2,8 +2,9 @@ import { createRootRoute, Link, Outlet, useRouterState } from "@tanstack/react-r
 import { CaseHeader } from "../components/CaseHeader";
 import { LightboxProvider } from "../components/Lightbox";
 import { SiteFooter } from "../components/SiteFooter";
+import { ScrollReveal } from "../components/ScrollReveal";
 import { SiteHeader } from "../components/SiteHeader";
-import { content } from "../data/content";
+import { useSite } from "../components/LocaleProvider";
 
 function RootLayout() {
   const isCase = useRouterState({
@@ -13,6 +14,7 @@ function RootLayout() {
   return (
     <LightboxProvider>
       <div className="page">
+        <ScrollReveal />
         {isCase ? <CaseHeader /> : <SiteHeader />}
         <Outlet />
         <SiteFooter />
@@ -22,10 +24,11 @@ function RootLayout() {
 }
 
 function NotFound() {
+  const { ui } = useSite().content;
   return (
     <section className="missing">
-      <h1>{content.ui.notFound}</h1>
-      <Link to="/">{content.ui.backHome}</Link>
+      <h1>{ui.notFound}</h1>
+      <Link to="/">{ui.backHome}</Link>
     </section>
   );
 }

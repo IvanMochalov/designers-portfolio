@@ -1,6 +1,6 @@
 import { assetUrl } from "../data/assets";
-import { content } from "../data/content";
 import type { Block } from "../data/types";
+import { useSite } from "./LocaleProvider";
 import { ZoomImage } from "./ZoomImage";
 
 function TextBlockView({ block }: { block: Extract<Block, { type: "text" }> }) {
@@ -13,6 +13,7 @@ function TextBlockView({ block }: { block: Extract<Block, { type: "text" }> }) {
 }
 
 function BlockView({ block }: { block: Block }) {
+  const email = useSite().content.profile.email;
   if (block.type === "text") return <TextBlockView block={block} />;
   if (block.type === "image") {
     return <ZoomImage src={block.src} alt={block.alt} caption={block.caption} />;
@@ -60,7 +61,7 @@ function BlockView({ block }: { block: Block }) {
   return (
     <div className="nda">
       <p>{block.body}</p>
-      <a href={`mailto:${content.profile.email}`}>{content.profile.email}</a>
+      <a href={`mailto:${email}`}>{email}</a>
     </div>
   );
 }

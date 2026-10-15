@@ -1,168 +1,613 @@
 {
   "profile": {
-    "name": "Artyom Kashkarov",
-    "summary": "Product Designer turning complex workflows, data, and business logic into clear, intuitive interfaces.",
+    "name": {
+      "en": "Artyom Kashkarov",
+      "ru": "Артём Кашкаров"
+    },
+    "summary": {
+      "en": "Product Designer turning complex workflows, data, and business logic into clear, intuitive interfaces.",
+      "ru": "Продуктовый дизайнер: превращаю сложные процессы, данные и бизнес-логику в понятные интерфейсы."
+    },
     "avatar": "assets/portrait.png",
     "email": "kashkarov.artyom@gmail.com",
     "scheduleUrl": "",
-    "tagline": "Always curious about how things work —\nand how to make them work better.",
+    "tagline": {
+      "en": "Always curious about how things work —\nand how to make them work better.",
+      "ru": "Всегда интересно, как устроены вещи —\nи как сделать так, чтобы они работали лучше."
+    },
     "wordmark": "assets/wordmark.svg",
-    "copyright": "© 2026 Artyom · Product Designer",
+    "copyright": {
+      "en": "© 2026 Artyom · Product Designer",
+      "ru": "© 2026 Артём · Продуктовый дизайнер"
+    },
     "social": [
-      { "label": "LinkedIn", "icon": "assets/linkedin.svg", "href": "" },
-      { "label": "Telegram", "icon": "assets/telegram.svg", "href": "" }
+      {
+        "label": {
+          "en": "LinkedIn",
+          "ru": "LinkedIn"
+        },
+        "icon": "assets/linkedin.svg",
+        "href": ""
+      },
+      {
+        "label": {
+          "en": "Telegram",
+          "ru": "Telegram"
+        },
+        "icon": "assets/telegram.svg",
+        "href": ""
+      }
     ]
   },
   "ui": {
     "nav": [
-      { "label": "Projects", "to": "/" },
-      { "label": "About", "to": "/about" },
-      { "label": "Resume", "to": "/resume" }
+      {
+        "label": {
+          "en": "Projects",
+          "ru": "Проекты"
+        },
+        "to": "/"
+      },
+      {
+        "label": {
+          "en": "About",
+          "ru": "Обо мне"
+        },
+        "to": "/about"
+      },
+      {
+        "label": {
+          "en": "Resume",
+          "ru": "Резюме"
+        },
+        "to": "/resume"
+      }
     ],
-    "locale": "RU",
-    "latestWork": "My latest work",
-    "letsChat": "Let’s chat",
-    "copied": "Copied!",
-    "schedule": "Schedule a call",
-    "linksTitle": "Links",
-    "contactTitle": "Contact",
-    "exploreMore": "Explore more",
-    "menuOpen": "Menu",
-    "menuClose": "Close",
-    "metaLabels": {
-      "role": "Role",
-      "timeline": "Timeline",
-      "team": "Team",
-      "platform": "Platform"
+    "latestWork": {
+      "en": "My latest work",
+      "ru": "Моя последняя работа"
     },
-    "notFound": "This project is not in the portfolio yet.",
-    "backHome": "Back to projects"
+    "letsChat": {
+      "en": "Let’s chat",
+      "ru": "Давайте пообщаемся"
+    },
+    "copied": {
+      "en": "Copied!",
+      "ru": "Скопировано!"
+    },
+    "schedule": {
+      "en": "Schedule a call",
+      "ru": "Назначить звонок"
+    },
+    "linksTitle": {
+      "en": "Links",
+      "ru": "Ссылки"
+    },
+    "contactTitle": {
+      "en": "Contact",
+      "ru": "Контакты"
+    },
+    "exploreMore": {
+      "en": "Explore more",
+      "ru": "Смотреть ещё"
+    },
+    "menuOpen": {
+      "en": "Menu",
+      "ru": "Меню"
+    },
+    "menuClose": {
+      "en": "Close",
+      "ru": "Закрыть"
+    },
+    "metaLabels": {
+      "role": {
+        "en": "Role",
+        "ru": "Роль"
+      },
+      "timeline": {
+        "en": "Timeline",
+        "ru": "Период"
+      },
+      "team": {
+        "en": "Team",
+        "ru": "Команда"
+      },
+      "platform": {
+        "en": "Platform",
+        "ru": "Платформа"
+      }
+    },
+    "notFound": {
+      "en": "This project is not in the portfolio yet.",
+      "ru": "Этого проекта пока нет в портфолио."
+    },
+    "backHome": {
+      "en": "Back to projects",
+      "ru": "К проектам"
+    },
+    "switchTo": {
+      "en": "Switch language to Russian",
+      "ru": "Переключить язык на английский"
+    }
   },
   "experiments": [],
   "about": {
     "portrait": "assets/about-portrait-tone.png",
-    "portraitAlt": "Artyom Kashkarov",
-    "heading": "Hello, I'm Artyom.",
-    "headingMuted": "Product Designer for complex digital products.",
+    "portraitAlt": {
+      "en": "Artyom Kashkarov",
+      "ru": "Артём Кашкаров"
+    },
+    "heading": {
+      "en": "Hello, I'm Artyom.",
+      "ru": "Привет, я Артём."
+    },
+    "headingMuted": {
+      "en": "Product Designer for complex digital products.",
+      "ru": "Продуктовый дизайнер сложных цифровых продуктов."
+    },
     "paragraphs": [
-      "My journey began with architecture. I wanted to design buildings, but over time I realized that creating digital spaces where people solve real problems is much more interesting.",
-      "I have been working in interface design for over five years. For the last two years, I have been focused on digital services for the construction industry: designing complex user scenarios, analytical systems, and tools for handling large volumes of data.",
-      "I enjoy finding order in complexity. Understanding processes, asking questions, eliminating the unnecessary, and turning convoluted logic into clear interfaces.",
-      "Currently, I am actively exploring AI capabilities, experimenting with new tools, and looking for ways to make the process of creating digital products faster and more efficient."
-    ],
-    "interestsTitle": "What I’m into",
-    "interestsMuted": "right now",
-    "interests": [
-      { "label": "AI tools", "icon": "assets/interest-ai.png" },
-      { "label": "Minimal interfaces", "icon": "assets/interest-minimal.png" },
-      { "label": "Football", "icon": "assets/interest-football.png" },
-      { "label": "Tennis", "icon": "assets/interest-tennis.png" },
-      { "label": "Techno music", "icon": "assets/interest-techno.png" },
-      { "label": "Long walks", "icon": "assets/interest-walks.png" },
-      { "label": "Gym", "icon": "assets/interest-gym.png" },
-      { "label": "Ramen", "icon": "assets/interest-ramen.png" },
-      { "label": "Complex tasks", "icon": "assets/interest-complex.png" },
-      { "label": "Design systems", "icon": "assets/interest-systems.png" },
-      { "label": "Future of technology", "icon": "assets/interest-future.png" }
-    ],
-    "valuesTitle": "The values",
-    "valuesMuted": "behind my work",
-    "values": [
       {
-        "title": "Systems Thinking",
-        "body": "I look at the product as a whole, considering the relationships between elements, users, and processes."
+        "en": "My journey began with architecture. I wanted to design buildings, but over time I realized that creating digital spaces where people solve real problems is much more interesting.",
+        "ru": "Мой путь начался с архитектуры. Я хотел проектировать здания, но со временем понял, что создавать цифровые пространства, где люди решают реальные задачи, гораздо интереснее."
       },
       {
-        "title": "Simplicity in Complexity",
-        "body": "I transform complex processes into clear and user-friendly interfaces, removing everything unnecessary."
+        "en": "I have been working in interface design for over five years. For the last two years, I have been focused on digital services for the construction industry: designing complex user scenarios, analytical systems, and tools for handling large volumes of data.",
+        "ru": "Я занимаюсь дизайном интерфейсов больше пяти лет. Последние два года сосредоточен на цифровых сервисах для строительной отрасли: проектирую сложные пользовательские сценарии, аналитические системы и инструменты для работы с большими объёмами данных."
       },
       {
-        "title": "Meaningful Design",
-        "body": "Every decision I make has a purpose and should bring real benefits to users and the business."
+        "en": "I enjoy finding order in complexity. Understanding processes, asking questions, eliminating the unnecessary, and turning convoluted logic into clear interfaces.",
+        "ru": "Мне нравится находить порядок в сложности. Разбираться в процессах, задавать вопросы, убирать лишнее и превращать запутанную логику в ясные интерфейсы."
       },
       {
-        "title": "Continuous Development",
-        "body": "I study new technologies, experiment, and seek more effective ways to solve problems."
+        "en": "Currently, I am actively exploring AI capabilities, experimenting with new tools, and looking for ways to make the process of creating digital products faster and more efficient.",
+        "ru": "Сейчас я активно изучаю возможности ИИ, экспериментирую с новыми инструментами и ищу способы делать создание цифровых продуктов быстрее и эффективнее."
       }
     ],
-    "pathTitle": "From",
-    "pathMuted": "blueprints to pixels",
+    "interestsTitle": {
+      "en": "What I’m into",
+      "ru": "Чем я увлечён"
+    },
+    "interestsMuted": {
+      "en": "right now",
+      "ru": "прямо сейчас"
+    },
+    "interests": [
+      {
+        "label": {
+          "en": "AI tools",
+          "ru": "Инструменты ИИ"
+        },
+        "icon": "assets/interest-ai.png"
+      },
+      {
+        "label": {
+          "en": "Minimal interfaces",
+          "ru": "Минималистичные интерфейсы"
+        },
+        "icon": "assets/interest-minimal.png"
+      },
+      {
+        "label": {
+          "en": "Football",
+          "ru": "Футбол"
+        },
+        "icon": "assets/interest-football.png"
+      },
+      {
+        "label": {
+          "en": "Tennis",
+          "ru": "Теннис"
+        },
+        "icon": "assets/interest-tennis.png"
+      },
+      {
+        "label": {
+          "en": "Techno music",
+          "ru": "Техно"
+        },
+        "icon": "assets/interest-techno.png"
+      },
+      {
+        "label": {
+          "en": "Long walks",
+          "ru": "Долгие прогулки"
+        },
+        "icon": "assets/interest-walks.png"
+      },
+      {
+        "label": {
+          "en": "Gym",
+          "ru": "Зал"
+        },
+        "icon": "assets/interest-gym.png"
+      },
+      {
+        "label": {
+          "en": "Ramen",
+          "ru": "Рамен"
+        },
+        "icon": "assets/interest-ramen.png"
+      },
+      {
+        "label": {
+          "en": "Complex tasks",
+          "ru": "Сложные задачи"
+        },
+        "icon": "assets/interest-complex.png"
+      },
+      {
+        "label": {
+          "en": "Design systems",
+          "ru": "Дизайн-системы"
+        },
+        "icon": "assets/interest-systems.png"
+      },
+      {
+        "label": {
+          "en": "Future of technology",
+          "ru": "Будущее технологий"
+        },
+        "icon": "assets/interest-future.png"
+      }
+    ],
+    "valuesTitle": {
+      "en": "The values",
+      "ru": "Ценности"
+    },
+    "valuesMuted": {
+      "en": "behind my work",
+      "ru": "в основе работы"
+    },
+    "values": [
+      {
+        "title": {
+          "en": "Systems Thinking",
+          "ru": "Системное мышление"
+        },
+        "body": {
+          "en": "I look at the product as a whole, considering the relationships between elements, users, and processes.",
+          "ru": "Смотрю на продукт целиком и учитываю связи между элементами, людьми и процессами."
+        }
+      },
+      {
+        "title": {
+          "en": "Simplicity in Complexity",
+          "ru": "Простота в сложности"
+        },
+        "body": {
+          "en": "I transform complex processes into clear and user-friendly interfaces, removing everything unnecessary.",
+          "ru": "Превращаю сложные процессы в понятные интерфейсы и убираю всё лишнее."
+        }
+      },
+      {
+        "title": {
+          "en": "Meaningful Design",
+          "ru": "Осмысленный дизайн"
+        },
+        "body": {
+          "en": "Every decision I make has a purpose and should bring real benefits to users and the business.",
+          "ru": "Каждое решение зачем-то нужно и должно приносить пользу людям и бизнесу."
+        }
+      },
+      {
+        "title": {
+          "en": "Continuous Development",
+          "ru": "Непрерывное развитие"
+        },
+        "body": {
+          "en": "I study new technologies, experiment, and seek more effective ways to solve problems.",
+          "ru": "Изучаю новые технологии, экспериментирую и ищу более эффективные способы решать задачи."
+        }
+      }
+    ],
+    "pathTitle": {
+      "en": "From",
+      "ru": "От"
+    },
+    "pathMuted": {
+      "en": "blueprints to pixels",
+      "ru": "чертежей к пикселям"
+    },
     "path": [
-      { "src": "assets/path-drawing.png", "alt": "Pencil drawing over a blueprint", "caption": "Drawing" },
-      { "src": "assets/path-graphic.png", "alt": "Tablet with a graphic design sketch", "caption": "Graphic Design" },
-      { "src": "assets/path-ux.png", "alt": "Design system file in an editor", "caption": "UX/UI and Design systems" },
-      { "src": "assets/path-systems.png", "alt": "Screens of a digital product", "caption": "Complex digital systems" }
+      {
+        "src": "assets/path-drawing.png",
+        "alt": {
+          "en": "Pencil drawing over a blueprint",
+          "ru": "Карандашный рисунок поверх чертежа"
+        },
+        "caption": {
+          "en": "Drawing",
+          "ru": "Рисунок"
+        }
+      },
+      {
+        "src": "assets/path-graphic.png",
+        "alt": {
+          "en": "Tablet with a graphic design sketch",
+          "ru": "Планшет с эскизом графического дизайна"
+        },
+        "caption": {
+          "en": "Graphic Design",
+          "ru": "Графический дизайн"
+        }
+      },
+      {
+        "src": "assets/path-ux.png",
+        "alt": {
+          "en": "Design system file in an editor",
+          "ru": "Файл дизайн-системы в редакторе"
+        },
+        "caption": {
+          "en": "UX/UI and Design systems",
+          "ru": "UX/UI и дизайн-системы"
+        }
+      },
+      {
+        "src": "assets/path-systems.png",
+        "alt": {
+          "en": "Screens of a digital product",
+          "ru": "Экраны цифрового продукта"
+        },
+        "caption": {
+          "en": "Complex digital systems",
+          "ru": "Сложные цифровые системы"
+        }
+      }
     ]
   },
   "resume": {
     "jobs": [
       {
-        "role": "Product Designer",
-        "company": "Moscow General Plan Institute",
-        "dates": "June 2025 - now",
-        "location": "Remote",
+        "role": {
+          "en": "Product Designer",
+          "ru": "Продуктовый дизайнер"
+        },
+        "company": {
+          "en": "Moscow General Plan Institute",
+          "ru": "Институт Генплана Москвы"
+        },
+        "dates": {
+          "en": "June 2025 - now",
+          "ru": "июнь 2025 — сейчас"
+        },
+        "location": {
+          "en": "Remote",
+          "ru": "Удалённо"
+        },
         "icon": "assets/logo-mgpi.svg",
-        "body": "Designed and built a design system from scratch for Moscow's Urban Development Complex, establishing a unified standard across its digital services.\n\nDesign complex digital products and workflows, transforming technical requirements into intuitive, scalable interfaces."
+        "body": {
+          "en": "Designed and built a design system from scratch for Moscow's Urban Development Complex, establishing a unified standard across its digital services.\n\nDesign complex digital products and workflows, transforming technical requirements into intuitive, scalable interfaces.",
+          "ru": "Собрал дизайн-систему с нуля для Комплекса градостроительной политики Москвы и задал единый стандарт для её цифровых сервисов.\n\nПроектирую сложные цифровые продукты и процессы, превращая технические требования в понятные масштабируемые интерфейсы."
+        }
       },
       {
-        "role": "Product Designer",
-        "company": "Webinfra",
-        "dates": "June 2023 - 2026",
-        "location": "Part time",
+        "role": {
+          "en": "Product Designer",
+          "ru": "Продуктовый дизайнер"
+        },
+        "company": {
+          "en": "Webinfra",
+          "ru": "Webinfra"
+        },
+        "dates": {
+          "en": "June 2023 - 2026",
+          "ru": "июнь 2023 — 2026"
+        },
+        "location": {
+          "en": "Part time",
+          "ru": "Частичная занятость"
+        },
         "icon": "assets/logo-webinfra.svg",
-        "body": "Designed user-centered interfaces for B2B and B2C digital products, focusing on usability, functionality, and visual consistency.\n\nTranslated complex requirements into intuitive user flows, interactive prototypes, and scalable UI solutions."
+        "body": {
+          "en": "Designed user-centered interfaces for B2B and B2C digital products, focusing on usability, functionality, and visual consistency.\n\nTranslated complex requirements into intuitive user flows, interactive prototypes, and scalable UI solutions.",
+          "ru": "Проектировал интерфейсы для B2B- и B2C-продуктов с упором на удобство, функциональность и визуальную цельность.\n\nПереводил сложные требования в понятные сценарии, интерактивные прототипы и масштабируемые интерфейсы."
+        }
       },
       {
-        "role": "Graphic Designer",
-        "company": "Department of Urban Planning Policy",
-        "dates": "June 2023 - 2025",
-        "location": "Moscow",
+        "role": {
+          "en": "Graphic Designer",
+          "ru": "Графический дизайнер"
+        },
+        "company": {
+          "en": "Department of Urban Planning Policy",
+          "ru": "Департамент градостроительной политики"
+        },
+        "dates": {
+          "en": "June 2023 - 2025",
+          "ru": "июнь 2023 — 2025"
+        },
+        "location": {
+          "en": "Moscow",
+          "ru": "Москва"
+        },
         "icon": "assets/logo-urban.svg",
-        "body": "Designed presentations and visual materials for government and urban development projects, making complex information clear and accessible.\n\nCreated infographics, data visualizations, and structured layouts to communicate key ideas effectively."
+        "body": {
+          "en": "Designed presentations and visual materials for government and urban development projects, making complex information clear and accessible.\n\nCreated infographics, data visualizations, and structured layouts to communicate key ideas effectively.",
+          "ru": "Делал презентации и визуальные материалы для государственных и градостроительных проектов, чтобы сложная информация была понятной и доступной.\n\nСоздавал инфографику, визуализации данных и структурированные макеты, которые ясно доносят главные идеи."
+        }
       },
       {
-        "role": "Web Designer",
-        "company": "SSL Dragon",
-        "dates": "August 2021 - 2023",
-        "location": "San Jose, Remote",
+        "role": {
+          "en": "Web Designer",
+          "ru": "Веб-дизайнер"
+        },
+        "company": {
+          "en": "SSL Dragon",
+          "ru": "SSL Dragon"
+        },
+        "dates": {
+          "en": "August 2021 - 2023",
+          "ru": "август 2021 — 2023"
+        },
+        "location": {
+          "en": "San Jose, Remote",
+          "ru": "Сан-Хосе, удалённо"
+        },
         "icon": "assets/logo-ssldragon.svg",
-        "body": "Designed responsive websites and landing pages, combining usability with modern visual design.\n\nCreated custom illustrations and graphic assets to establish a consistent visual identity across digital experiences."
+        "body": {
+          "en": "Designed responsive websites and landing pages, combining usability with modern visual design.\n\nCreated custom illustrations and graphic assets to establish a consistent visual identity across digital experiences.",
+          "ru": "Проектировал адаптивные сайты и лендинги, соединяя удобство с современным визуальным дизайном.\n\nРисовал иллюстрации и графику, чтобы собрать цельный визуальный образ цифровых продуктов."
+        }
       }
     ],
-    "toolsTitle": "Tools",
-    "toolsMuted": "powering my work",
+    "toolsTitle": {
+      "en": "Tools",
+      "ru": "Инструменты"
+    },
+    "toolsMuted": {
+      "en": "powering my work",
+      "ru": "которыми я работаю"
+    },
     "tools": [
-      { "name": "Figma", "detail": "UI Design", "icon": "assets/tool-figma.svg" },
-      { "name": "Instagram", "detail": "Scrolling Reels", "icon": "assets/tool-instagram.svg" },
-      { "name": "XMind", "detail": "Brainstorming, workshops", "icon": "assets/tool-xmind.png", "iconCrop": true },
-      { "name": "Claude", "detail": "Ideation, prototyping", "icon": "assets/tool-claude.svg" },
-      { "name": "Perplexity", "detail": "Search", "icon": "assets/tool-perplexity.svg" },
-      { "name": "Framer", "detail": "Web design, templates", "icon": "assets/tool-framer.svg" }
+      {
+        "name": {
+          "en": "Figma",
+          "ru": "Figma"
+        },
+        "detail": {
+          "en": "UI Design",
+          "ru": "Дизайн интерфейсов"
+        },
+        "icon": "assets/tool-figma.svg"
+      },
+      {
+        "name": {
+          "en": "Instagram",
+          "ru": "Instagram"
+        },
+        "detail": {
+          "en": "Scrolling Reels",
+          "ru": "Лента Reels"
+        },
+        "icon": "assets/tool-instagram.svg"
+      },
+      {
+        "name": {
+          "en": "XMind",
+          "ru": "XMind"
+        },
+        "detail": {
+          "en": "Brainstorming, workshops",
+          "ru": "Брейнштормы и воркшопы"
+        },
+        "icon": "assets/tool-xmind.png",
+        "iconCrop": true
+      },
+      {
+        "name": {
+          "en": "Claude",
+          "ru": "Claude"
+        },
+        "detail": {
+          "en": "Ideation, prototyping",
+          "ru": "Идеи и прототипы"
+        },
+        "icon": "assets/tool-claude.svg"
+      },
+      {
+        "name": {
+          "en": "Perplexity",
+          "ru": "Perplexity"
+        },
+        "detail": {
+          "en": "Search",
+          "ru": "Поиск"
+        },
+        "icon": "assets/tool-perplexity.svg"
+      },
+      {
+        "name": {
+          "en": "Framer",
+          "ru": "Framer"
+        },
+        "detail": {
+          "en": "Web design, templates",
+          "ru": "Веб-дизайн и шаблоны"
+        },
+        "icon": "assets/tool-framer.svg"
+      }
     ],
-    "skillsTitle": "Skills",
+    "skillsTitle": {
+      "en": "Skills",
+      "ru": "Навыки"
+    },
     "skills": [
-      "Product thinking",
-      "UX research",
-      "Interaction design",
-      "Design systems",
-      "Prototyping",
-      "User flows",
-      "Usability testing",
-      "Visual design",
-      "Information architecture",
-      "System Thinking",
-      "Design Handoff"
+      {
+        "en": "Product thinking",
+        "ru": "Продуктовое мышление"
+      },
+      {
+        "en": "UX research",
+        "ru": "UX-исследования"
+      },
+      {
+        "en": "Interaction design",
+        "ru": "Дизайн взаимодействия"
+      },
+      {
+        "en": "Design systems",
+        "ru": "Дизайн-системы"
+      },
+      {
+        "en": "Prototyping",
+        "ru": "Прототипирование"
+      },
+      {
+        "en": "User flows",
+        "ru": "Пользовательские сценарии"
+      },
+      {
+        "en": "Usability testing",
+        "ru": "Юзабилити-тестирование"
+      },
+      {
+        "en": "Visual design",
+        "ru": "Визуальный дизайн"
+      },
+      {
+        "en": "Information architecture",
+        "ru": "Информационная архитектура"
+      },
+      {
+        "en": "System Thinking",
+        "ru": "Системное мышление"
+      },
+      {
+        "en": "Design Handoff",
+        "ru": "Передача в разработку"
+      }
     ],
-    "educationTitle": "Education",
+    "educationTitle": {
+      "en": "Education",
+      "ru": "Образование"
+    },
     "education": [
       {
-        "title": "Moscow State University of Civil Engineering",
-        "dates": "2018 – 2022",
-        "location": "Moscow",
+        "title": {
+          "en": "Moscow State University of Civil Engineering",
+          "ru": "НИУ МГСУ"
+        },
+        "dates": {
+          "en": "2018 – 2022",
+          "ru": "2018 – 2022"
+        },
+        "location": {
+          "en": "Moscow",
+          "ru": "Москва"
+        },
         "lines": [
-          "Faculty: Institute of Hydraulic and Energy Construction",
-          "Department: Construction of Thermal and Nuclear Energy Facilities",
-          "Specialty: 08.03.01 Construction"
+          {
+            "en": "Faculty: Institute of Hydraulic and Energy Construction",
+            "ru": "Факультет: Институт гидротехнического и энергетического строительства"
+          },
+          {
+            "en": "Department: Construction of Thermal and Nuclear Energy Facilities",
+            "ru": "Кафедра: Строительство сооружений тепловой и атомной энергетики"
+          },
+          {
+            "en": "Specialty: 08.03.01 Construction",
+            "ru": "Специальность: 08.03.01 Строительство"
+          }
         ]
       }
     ]
@@ -170,94 +615,281 @@
   "projects": [
     {
       "slug": "crm-platform-for-managing-room-bookings",
-      "title": "CRM platform for managing room bookings",
+      "title": {
+        "en": "CRM platform for managing room bookings",
+        "ru": "CRM для управления бронированием помещений"
+      },
       "client": "",
       "year": "2024",
       "cover": "assets/project-crm-bg.png",
-      "screens": ["assets/project-crm-screen.png"],
-      "summary": "CRM for space operators: managing rooms, occupancy calendar, and analytics, all integrated into one workflow instead of dozens of spreadsheets and chats.",
-      "hero": { "screen": "assets/crm-hero.png" },
-      "brief": { "title": "Summary", "text": "If you're too lazy to read and scroll" },
+      "screens": [
+        "assets/project-crm-screen.png"
+      ],
+      "summary": {
+        "en": "CRM for space operators: managing rooms, occupancy calendar, and analytics, all integrated into one workflow instead of dozens of spreadsheets and chats.",
+        "ru": "CRM для операторов пространств: комнаты, календарь загрузки и аналитика в одном процессе вместо десятков таблиц и переписок."
+      },
+      "hero": {
+        "screen": "assets/crm-hero.png"
+      },
+      "brief": {
+        "title": {
+          "en": "Summary",
+          "ru": "Кратко"
+        },
+        "text": {
+          "en": "If you're too lazy to read and scroll",
+          "ru": "Если лень читать и листать"
+        },
+        "items": [
+          {
+            "title": {
+              "en": "Product",
+              "ru": "Продукт"
+            },
+            "text": {
+              "en": "CRM for managing room bookings across multiple buildings.",
+              "ru": "CRM для управления бронированием помещений в нескольких зданиях."
+            }
+          },
+          {
+            "title": {
+              "en": "Problem",
+              "ru": "Проблема"
+            },
+            "text": {
+              "en": "Complex scenarios slowed down administrators who handled bookings by phone.",
+              "ru": "Сложные сценарии тормозили администраторов, которые принимали брони по телефону."
+            }
+          },
+          {
+            "title": {
+              "en": "My solution",
+              "ru": "Моё решение"
+            },
+            "text": {
+              "en": "Built a CRM structure, calendar, booking process, and room management, integrating them with common logic.",
+              "ru": "Собрал структуру CRM, календарь, процесс бронирования и управление помещениями и связал их общей логикой."
+            }
+          },
+          {
+            "title": {
+              "en": "Result",
+              "ru": "Результат"
+            },
+            "text": {
+              "en": "Designed a unified system with clear workflows, centralized data, and tools to monitor room occupancy.",
+              "ru": "Спроектировал единую систему с понятными процессами, общими данными и инструментами, чтобы видеть загрузку помещений."
+            }
+          }
+        ]
+      },
       "meta": {
-        "role": "Product Designer",
-        "timeline": "2024",
-        "team": "1 Designer",
-        "platform": "Web application"
+        "role": {
+          "en": "Product Designer",
+          "ru": "Продуктовый дизайнер"
+        },
+        "timeline": {
+          "en": "2024",
+          "ru": "2024"
+        },
+        "team": {
+          "en": "1 Designer",
+          "ru": "1 дизайнер"
+        },
+        "platform": {
+          "en": "Web application",
+          "ru": "Веб-приложение"
+        }
       },
       "sections": [
         {
           "id": "overview",
-          "nav": "Overview",
-          "kicker": "Overview",
-          "heading": "Managing spaces in one system",
+          "nav": {
+            "en": "Overview",
+            "ru": "Обзор"
+          },
+          "kicker": {
+            "en": "Overview",
+            "ru": "Обзор"
+          },
+          "heading": {
+            "en": "Managing spaces in one system",
+            "ru": "Управление пространствами в одной системе"
+          },
           "paragraphs": [
-            "The operator manages dozens of spaces across several buildings. Previously, bookings were handled through spreadsheets and correspondence, leading to scheduling conflicts, fragmented data, and inefficient workflows. Frequent staff turnover added another challenge: new administrators required time-consuming training to handle everyday tasks."
+            {
+              "en": "The operator manages dozens of spaces across several buildings. Previously, bookings were handled through spreadsheets and correspondence, leading to scheduling conflicts, fragmented data, and inefficient workflows. Frequent staff turnover added another challenge: new administrators required time-consuming training to handle everyday tasks.",
+              "ru": "Оператор ведёт десятки пространств в нескольких зданиях. Раньше брони жили в таблицах и переписке: отсюда накладки в расписании, разрозненные данные и медленные процессы. Текучка кадров добавляла ещё одну проблему — новому администратору требовалось долгое обучение, чтобы справляться с обычными задачами."
+            }
           ],
           "insights": [
             {
-              "heading": "The Impact",
+              "heading": {
+                "en": "The Impact",
+                "ru": "Эффект"
+              },
               "paragraphs": [
-                "A unified CRM was designed to bring bookings, calendars, resource management, and analytics into one place. Simplified workflows, intuitive navigation, and clear visual feedback were introduced to reduce manual work, prevent errors, and help new employees get started with minimal training."
+                {
+                  "en": "A unified CRM was designed to bring bookings, calendars, resource management, and analytics into one place. Simplified workflows, intuitive navigation, and clear visual feedback were introduced to reduce manual work, prevent errors, and help new employees get started with minimal training.",
+                  "ru": "Единая CRM собрала брони, календари, управление ресурсами и аналитику в одном месте. Упрощённые сценарии, понятная навигация и ясная обратная связь уменьшают ручную работу, снижают число ошибок и помогают новым сотрудникам начать с минимальным обучением."
+                }
               ]
             }
           ]
         },
         {
           "id": "problem",
-          "nav": "Problem",
-          "kicker": "Problem",
-          "heading": "Manual bookings and a steep learning curve",
+          "nav": {
+            "en": "Problem",
+            "ru": "Проблема"
+          },
+          "kicker": {
+            "en": "Problem",
+            "ru": "Проблема"
+          },
+          "heading": {
+            "en": "Manual bookings and a steep learning curve",
+            "ru": "Ручные брони и долгий вход в работу"
+          },
           "paragraphs": [
-            "Information about spaces, clients, and requests was scattered across different sources. During calls, administrators had to manually check availability, clarify booking details, and monitor scheduling conflicts.",
-            "Frequent staff turnover made the situation worse. Each new employee needed training to understand the booking process, increasing operational costs and slowing down daily work."
+            {
+              "en": "Information about spaces, clients, and requests was scattered across different sources. During calls, administrators had to manually check availability, clarify booking details, and monitor scheduling conflicts.",
+              "ru": "Сведения о пространствах, клиентах и заявках были разбросаны по разным источникам. Во время звонка администратор вручную проверял доступность, уточнял детали брони и следил за накладками в расписании."
+            },
+            {
+              "en": "Frequent staff turnover made the situation worse. Each new employee needed training to understand the booking process, increasing operational costs and slowing down daily work.",
+              "ru": "Текучка усугубляла ситуацию. Каждого нового сотрудника приходилось обучать процессу бронирования, а это повышало затраты и замедляло ежедневную работу."
+            }
           ],
           "insights": [
             {
-              "heading": "Key Issues",
+              "heading": {
+                "en": "Key Issues",
+                "ru": "Ключевые проблемы"
+              },
               "points": [
-                { "title": "Scheduling conflicts", "text": "Rooms could be booked for overlapping times due to manual checks." },
-                { "title": "Fragmented data", "text": "Information about clients, spaces, and requests was spread across multiple sources." },
-                { "title": "Limited visibility", "text": "Administrators had to manually check occupancy and availability across buildings." },
-                { "title": "Complex approvals", "text": "Different employees participated in the same process but did not have a unified workspace." }
+                {
+                  "title": {
+                    "en": "Scheduling conflicts",
+                    "ru": "Накладки в расписании"
+                  },
+                  "text": {
+                    "en": "Rooms could be booked for overlapping times due to manual checks.",
+                    "ru": "Одно помещение могли забронировать на пересекающееся время, потому что доступность проверяли вручную."
+                  }
+                },
+                {
+                  "title": {
+                    "en": "Fragmented data",
+                    "ru": "Разрозненные данные"
+                  },
+                  "text": {
+                    "en": "Information about clients, spaces, and requests was spread across multiple sources.",
+                    "ru": "Информация о клиентах, пространствах и заявках была размазана по нескольким источникам."
+                  }
+                },
+                {
+                  "title": {
+                    "en": "Limited visibility",
+                    "ru": "Слабая видимость"
+                  },
+                  "text": {
+                    "en": "Administrators had to manually check occupancy and availability across buildings.",
+                    "ru": "Администраторам приходилось вручную проверять загрузку и доступность по всем зданиям."
+                  }
+                },
+                {
+                  "title": {
+                    "en": "Complex approvals",
+                    "ru": "Сложные согласования"
+                  },
+                  "text": {
+                    "en": "Different employees participated in the same process but did not have a unified workspace.",
+                    "ru": "В одном процессе участвовали разные сотрудники, но общего рабочего пространства у них не было."
+                  }
+                }
               ]
             }
           ]
         },
         {
           "id": "analysis",
-          "nav": "Analysis",
-          "kicker": "Analysis",
-          "heading": "First, understand the logic, then design the interface.",
+          "nav": {
+            "en": "Analysis",
+            "ru": "Анализ"
+          },
+          "kicker": {
+            "en": "Analysis",
+            "ru": "Анализ"
+          },
+          "heading": {
+            "en": "First, understand the logic, then design the interface.",
+            "ru": "Сначала логика, потом интерфейс"
+          },
           "paragraphs": [
-            "I started by analyzing booking scenarios, user roles, and existing interface solutions. It was important to determine what data was needed at each stage and where errors might occur.",
-            "I focused primarily on calendars, booking statuses, resource management, and access control."
+            {
+              "en": "I started by analyzing booking scenarios, user roles, and existing interface solutions. It was important to determine what data was needed at each stage and where errors might occur.",
+              "ru": "Я начал с разбора сценариев бронирования, ролей и уже существующих интерфейсов. Важно было понять, какие данные нужны на каждом шаге и где возникают ошибки."
+            },
+            {
+              "en": "I focused primarily on calendars, booking statuses, resource management, and access control.",
+              "ru": "В первую очередь смотрел на календари, статусы броней, управление ресурсами и права доступа."
+            }
           ],
           "insights": [
             {
               "heading": "",
               "figure": {
-                "src": "assets/crm-analysis.png",
-                "alt": "Booking flow analysis",
-                "fit": "contain",
-                "arrows": true
+                "src": "assets/crm-booking-flow.png",
+                "alt": {
+                  "en": "Booking flow analysis",
+                  "ru": "Анализ процесса бронирования"
+                },
+                "slides": [
+                  {
+                    "src": "assets/crm-booking-flow.png",
+                    "fit": "cover",
+                    "align": "left"
+                  },
+                  {
+                    "src": "assets/crm-structure.png",
+                    "fit": "contain"
+                  }
+                ]
               }
             }
           ]
         },
         {
           "id": "architecture",
-          "nav": "Architecture",
-          "kicker": "Architecture",
-          "heading": "One booking connects all data",
+          "nav": {
+            "en": "Architecture",
+            "ru": "Архитектура"
+          },
+          "kicker": {
+            "en": "Architecture",
+            "ru": "Архитектура"
+          },
+          "heading": {
+            "en": "One booking connects all data",
+            "ru": "Одна бронь связывает все данные"
+          },
           "paragraphs": [
-            "I mapped out the sequence of actions from the incoming call to the booking confirmation. I focused on what data the administrator needs at each stage, where errors occur, and what actions can be simplified."
+            {
+              "en": "I mapped out the sequence of actions from the incoming call to the booking confirmation. I focused on what data the administrator needs at each stage, where errors occur, and what actions can be simplified.",
+              "ru": "Я разложил последовательность действий от входящего звонка до подтверждения брони. Смотрел, какие данные нужны администратору на каждом шаге, где случаются ошибки и какие действия можно упростить."
+            }
           ],
           "insights": [
             {
               "heading": "",
               "figure": {
                 "src": "assets/crm-architecture.png",
-                "alt": "Booking architecture diagram",
+                "alt": {
+                  "en": "Booking architecture diagram",
+                  "ru": "Схема архитектуры бронирования"
+                },
                 "fit": "contain"
               }
             }
@@ -265,52 +897,121 @@
         },
         {
           "id": "solutions",
-          "nav": "Solutions",
-          "kicker": "Solutions",
+          "nav": {
+            "en": "Solutions",
+            "ru": "Решения"
+          },
+          "kicker": {
+            "en": "Solutions",
+            "ru": "Решения"
+          },
           "paragraphs": [],
           "insights": [
             {
-              "heading": "Dashboard — everything that needs attention",
+              "heading": {
+                "en": "Dashboard — everything that needs attention",
+                "ru": "Дашборд — всё, что требует внимания"
+              },
               "paragraphs": [
-                "The administrator opens the day and immediately understands: what is confirmed, what is awaiting a decision, where conflicts are brewing. The dashboard answers questions before they are even asked."
-              ],
-              "figure": { "src": "assets/crm-dashboard.png", "alt": "CRM dashboard" }
-            },
-            {
-              "heading": "Visibility of occupancy",
-              "paragraphs": [
-                "All rooms on one timeline. Overlaps are visible before they become a problem, and available slots are immediately apparent, without mental calculations."
-              ],
-              "figure": { "src": "assets/project-crm-screen.png", "alt": "Room occupancy calendar" }
-            },
-            {
-              "heading": "A personalized view for everyone",
-              "paragraphs": [
-                "The administrator, manager, and leader see the system from their own perspective. Permissions define not only access but also what a person sees first — and what they don’t need to see at all."
-              ],
-              "figure": { "src": "assets/crm-roles.png", "alt": "Role-based CRM views" }
-            },
-            {
-              "heading": "Booking without unnecessary steps",
-              "paragraphs": [
-                "All data, checks, and additional services are consolidated into one scenario to facilitate quick and error-free bookings."
+                {
+                  "en": "The administrator opens the day and immediately understands: what is confirmed, what is awaiting a decision, where conflicts are brewing. The dashboard answers questions before they are even asked.",
+                  "ru": "Администратор открывает день и сразу видит, что подтверждено, что ждёт решения и где назревает конфликт. Дашборд отвечает на вопросы ещё до того, как их задали."
+                }
               ],
               "figure": {
-                "src": "assets/crm-booking.png",
-                "alt": "Booking flow",
-                "slides": ["assets/crm-booking.png", "assets/crm-analysis.png"],
-                "arrows": true
+                "src": "assets/crm-dashboard.png",
+                "alt": {
+                  "en": "CRM dashboard",
+                  "ru": "Дашборд CRM"
+                }
+              }
+            },
+            {
+              "heading": {
+                "en": "Visibility of occupancy",
+                "ru": "Видимость загрузки"
+              },
+              "paragraphs": [
+                {
+                  "en": "All rooms on one timeline. Overlaps are visible before they become a problem, and available slots are immediately apparent, without mental calculations.",
+                  "ru": "Все помещения на одной шкале времени. Пересечения видны до того, как станут проблемой, а свободные слоты читаются сразу, без подсчётов в уме."
+                }
+              ],
+              "figure": {
+                "src": "assets/project-crm-screen.png",
+                "alt": {
+                  "en": "Room occupancy calendar",
+                  "ru": "Календарь загрузки помещений"
+                }
+              }
+            },
+            {
+              "heading": {
+                "en": "A personalized view for everyone",
+                "ru": "Свой вид для каждой роли"
+              },
+              "paragraphs": [
+                {
+                  "en": "The administrator, manager, and leader see the system from their own perspective. Permissions define not only access but also what a person sees first — and what they don’t need to see at all.",
+                  "ru": "Администратор, менеджер и руководитель видят систему со своей стороны. Права определяют не только доступ, но и то, что человек видит первым — и чего ему видеть не нужно."
+                }
+              ],
+              "figure": {
+                "src": "assets/crm-roles.png",
+                "alt": {
+                  "en": "Role-based CRM views",
+                  "ru": "Ролевые представления CRM"
+                }
+              }
+            },
+            {
+              "heading": {
+                "en": "Booking without unnecessary steps",
+                "ru": "Бронь без лишних шагов"
+              },
+              "paragraphs": [
+                {
+                  "en": "All data, checks, and additional services are consolidated into one scenario to facilitate quick and error-free bookings.",
+                  "ru": "Данные, проверки и дополнительные услуги собраны в одном сценарии, чтобы бронировать быстро и без ошибок."
+                }
+              ],
+              "figure": {
+                "src": "assets/crm-booking-1.png",
+                "alt": {
+                  "en": "Booking flow",
+                  "ru": "Процесс бронирования"
+                },
+                "slides": [
+                  "assets/crm-booking-1.png",
+                  "assets/crm-booking-2.png",
+                  "assets/crm-booking-3.png",
+                  "assets/crm-booking-4.png",
+                  "assets/crm-booking-5.png",
+                  "assets/crm-booking-6.png"
+                ]
               }
             }
           ]
         },
         {
           "id": "takeaways",
-          "nav": "Takeaways",
-          "kicker": "Takeaways",
-          "heading": "A good interface helps focus on the client, not the system.",
+          "nav": {
+            "en": "Takeaways",
+            "ru": "Выводы"
+          },
+          "kicker": {
+            "en": "Takeaways",
+            "ru": "Выводы"
+          },
+          "heading": {
+            "en": "A good interface helps focus on the client, not the system.",
+            "ru": "Хороший интерфейс помогает думать о клиенте, а не о системе"
+          },
           "paragraphs": [
-            "The main goal was to reduce the number of manual checks and switches between sections. The administrator should quickly find the necessary information and book without losing the context of the conversation."
+            {
+              "en": "The main goal was to reduce the number of manual checks and switches between sections. The administrator should quickly find the necessary information and book without losing the context of the conversation.",
+              "ru": "Главной целью было сократить ручные проверки и переключения между разделами. Администратор должен быстро находить нужное и бронировать, не теряя контекст разговора."
+            }
           ],
           "insights": []
         }
@@ -318,118 +1019,332 @@
     },
     {
       "slug": "construction-tender-management",
-      "title": "Construction tender management, all in one place",
+      "title": {
+        "en": "Construction tender management, all in one place",
+        "ru": "Управление строительными тендерами в одном месте"
+      },
       "client": "",
       "year": "2025",
       "cover": "assets/project-tender-bg.png",
-      "screens": ["assets/project-tender-screen.png", "assets/project-tender-overlay.png"],
-      "summary": "A B2B platform designed to connect construction companies and contractors, bringing tender management, applications, and contractor selection into one unified workspace.",
+      "screens": [
+        "assets/project-tender-screen.png",
+        "assets/project-tender-overlay.png"
+      ],
+      "summary": {
+        "en": "A B2B platform designed to connect construction companies and contractors, bringing tender management, applications, and contractor selection into one unified workspace.",
+        "ru": "B2B-платформа, которая связывает строительные компании и подрядчиков и собирает тендеры, заявки и выбор подрядчика в одном рабочем пространстве."
+      },
       "hero": {
         "screen": "assets/project-tender-screen.png",
         "overlay": "assets/project-tender-overlay.png",
         "phone": "assets/tender-phone.png"
       },
-      "brief": { "title": "Summary", "text": "If you're too lazy to read and scroll" },
+      "brief": {
+        "title": {
+          "en": "Summary",
+          "ru": "Кратко"
+        },
+        "text": {
+          "en": "If you're too lazy to read and scroll",
+          "ru": "Если лень читать и листать"
+        },
+        "items": [
+          {
+            "title": {
+              "en": "Product",
+              "ru": "Продукт"
+            },
+            "text": {
+              "en": "A B2B platform for organizing construction tenders, finding contractors, and managing the contractor selection process.",
+              "ru": "B2B-платформа для организации строительных тендеров, поиска подрядчиков и управления выбором подрядчика."
+            }
+          },
+          {
+            "title": {
+              "en": "Problem",
+              "ru": "Проблема"
+            },
+            "text": {
+              "en": "Design a new service from scratch by integrating complex tender processes, various user roles, and contractor evaluation into a single system.",
+              "ru": "Спроектировать сервис с нуля: сложные тендерные процессы, разные роли и оценка подрядчиков в одной системе."
+            }
+          },
+          {
+            "title": {
+              "en": "My solution",
+              "ru": "Моё решение"
+            },
+            "text": {
+              "en": "Developed the platform structure, role-based scenarios, the process for creating tenders, submitting bids, comparing contractors, and selecting the winner.",
+              "ru": "Разработал структуру платформы, ролевые сценарии и процесс создания тендера, подачи заявок, сравнения подрядчиков и выбора победителя."
+            }
+          },
+          {
+            "title": {
+              "en": "Result",
+              "ru": "Результат"
+            },
+            "text": {
+              "en": "Designed a unified platform with sequential workflows, transparent statuses, and tools for managing tenders at every stage.",
+              "ru": "Спроектировал единую платформу с последовательными процессами, прозрачными статусами и инструментами управления тендером на каждом этапе."
+            }
+          }
+        ]
+      },
       "meta": {
-        "role": "Product Designer",
-        "timeline": "2025",
-        "team": "1 Designer",
-        "platform": "Web application"
+        "role": {
+          "en": "Product Designer",
+          "ru": "Продуктовый дизайнер"
+        },
+        "timeline": {
+          "en": "2025",
+          "ru": "2025"
+        },
+        "team": {
+          "en": "1 Designer",
+          "ru": "1 дизайнер"
+        },
+        "platform": {
+          "en": "Web application",
+          "ru": "Веб-приложение"
+        }
       },
       "sections": [
         {
           "id": "overview",
-          "nav": "Overview",
-          "kicker": "Overview",
-          "heading": "Building a tender platform from scratch",
+          "nav": {
+            "en": "Overview",
+            "ru": "Обзор"
+          },
+          "kicker": {
+            "en": "Overview",
+            "ru": "Обзор"
+          },
+          "heading": {
+            "en": "Building a tender platform from scratch",
+            "ru": "Тендерная платформа с нуля"
+          },
           "paragraphs": [
-            "The project started with a business goal rather than an existing product to redesign. I was responsible for translating requirements into a complete user experience, defining the information architecture, user roles, and key workflows.",
-            "The main challenge was to make a complex, multi-stage tender process clear and manageable for everyone involved."
+            {
+              "en": "The project started with a business goal rather than an existing product to redesign. I was responsible for translating requirements into a complete user experience, defining the information architecture, user roles, and key workflows.",
+              "ru": "Проект начался с бизнес-цели, а не с готового продукта, который нужно было переделать. Я переводил требования в цельный пользовательский опыт: информационную архитектуру, роли и ключевые сценарии."
+            },
+            {
+              "en": "The main challenge was to make a complex, multi-stage tender process clear and manageable for everyone involved.",
+              "ru": "Главной сложностью было сделать многоэтапный тендерный процесс понятным и управляемым для всех участников."
+            }
           ],
           "insights": [
             {
-              "heading": "The Outcome",
+              "heading": {
+                "en": "The Outcome",
+                "ru": "Результат"
+              },
               "paragraphs": [
-                "A complete product experience was designed, including tender management, contractor profiles, applications, shortlisting, and selection workflows.",
-                "The platform was structured around different user roles, with clear navigation, transparent statuses, and tools for evaluating contractors."
+                {
+                  "en": "A complete product experience was designed, including tender management, contractor profiles, applications, shortlisting, and selection workflows.",
+                  "ru": "Спроектирован цельный опыт продукта: управление тендерами, профили подрядчиков, заявки, шорт-листы и выбор победителя."
+                },
+                {
+                  "en": "The platform was structured around different user roles, with clear navigation, transparent statuses, and tools for evaluating contractors.",
+                  "ru": "Платформа собрана вокруг разных ролей: понятная навигация, прозрачные статусы и инструменты оценки подрядчиков."
+                }
               ]
             }
           ]
         },
         {
           "id": "challenge",
-          "nav": "Challenge",
-          "kicker": "Challenge",
-          "heading": "Turning a complex process into a simple workflow",
+          "nav": {
+            "en": "Challenge",
+            "ru": "Задача"
+          },
+          "kicker": {
+            "en": "Challenge",
+            "ru": "Задача"
+          },
+          "heading": {
+            "en": "Turning a complex process into a simple workflow",
+            "ru": "Сложный процесс — простой сценарий"
+          },
           "paragraphs": [
-            "With no existing product to redesign, the main challenge was to translate business requirements into a clear and scalable digital experience.",
-            "The platform needed to support multiple user roles, complex tender workflows, and large amounts of contractor data — without making everyday tasks unnecessarily complicated."
+            {
+              "en": "With no existing product to redesign, the main challenge was to translate business requirements into a clear and scalable digital experience.",
+              "ru": "Готового продукта, который можно было бы переделать, не было. Главная задача — перевести бизнес-требования в ясный и масштабируемый цифровой опыт."
+            },
+            {
+              "en": "The platform needed to support multiple user roles, complex tender workflows, and large amounts of contractor data — without making everyday tasks unnecessarily complicated.",
+              "ru": "Платформе нужно было поддерживать несколько ролей, сложные тендерные процессы и большой объём данных о подрядчиках — и при этом не усложнять повседневные задачи."
+            }
           ],
           "insights": [
             {
-              "heading": "Key Challenges",
+              "heading": {
+                "en": "Key Challenges",
+                "ru": "Ключевые сложности"
+              },
               "points": [
-                { "title": "Multiple user roles", "text": "Different participants needed tailored workflows, permissions, and interfaces." },
-                { "title": "Complex tender lifecycle", "text": "Every stage, from tender creation to winner selection, required clear actions and statuses." },
-                { "title": "Contractor evaluation", "text": "Organizers needed an efficient way to review applications, compare candidates, and create shortlists." },
-                { "title": "Data & verification", "text": "Company information and external verification sources needed to be accessible within the evaluation process." }
+                {
+                  "title": {
+                    "en": "Multiple user roles",
+                    "ru": "Несколько ролей"
+                  },
+                  "text": {
+                    "en": "Different participants needed tailored workflows, permissions, and interfaces.",
+                    "ru": "Разным участникам нужны были свои сценарии, права и интерфейсы."
+                  }
+                },
+                {
+                  "title": {
+                    "en": "Complex tender lifecycle",
+                    "ru": "Сложный жизненный цикл тендера"
+                  },
+                  "text": {
+                    "en": "Every stage, from tender creation to winner selection, required clear actions and statuses.",
+                    "ru": "Каждый этап — от создания тендера до выбора победителя — требовал понятных действий и статусов."
+                  }
+                },
+                {
+                  "title": {
+                    "en": "Contractor evaluation",
+                    "ru": "Оценка подрядчиков"
+                  },
+                  "text": {
+                    "en": "Organizers needed an efficient way to review applications, compare candidates, and create shortlists.",
+                    "ru": "Организаторам нужен был удобный способ разбирать заявки, сравнивать кандидатов и собирать шорт-листы."
+                  }
+                },
+                {
+                  "title": {
+                    "en": "Data & verification",
+                    "ru": "Данные и проверка"
+                  },
+                  "text": {
+                    "en": "Company information and external verification sources needed to be accessible within the evaluation process.",
+                    "ru": "Сведения о компании и внешние источники проверки должны были быть доступны прямо в процессе оценки."
+                  }
+                }
               ]
             }
           ]
         },
         {
           "id": "solutions",
-          "nav": "Solutions",
-          "kicker": "Solutions",
+          "nav": {
+            "en": "Solutions",
+            "ru": "Решения"
+          },
+          "kicker": {
+            "en": "Solutions",
+            "ru": "Решения"
+          },
           "paragraphs": [],
           "insights": [
             {
-              "heading": "End-to-End Tender Workflow",
+              "heading": {
+                "en": "End-to-End Tender Workflow",
+                "ru": "Сквозной процесс тендера"
+              },
               "paragraphs": [
-                "Designed the entire tender lifecycle, from creating and publishing a tender to reviewing applications and selecting a winner. Clear stages, statuses, and actions help users navigate the process and understand what happens next."
+                {
+                  "en": "Designed the entire tender lifecycle, from creating and publishing a tender to reviewing applications and selecting a winner. Clear stages, statuses, and actions help users navigate the process and understand what happens next.",
+                  "ru": "Спроектировал весь жизненный цикл тендера: от создания и публикации до разбора заявок и выбора победителя. Понятные этапы, статусы и действия помогают ориентироваться в процессе и видеть, что будет дальше."
+                }
               ],
               "figure": {
-                "src": "assets/tender-workflow.png",
-                "alt": "Tender workflow screens",
-                "arrows": true
+                "src": "assets/tender-workflow-1.png",
+                "alt": {
+                  "en": "Tender workflow screens",
+                  "ru": "Экраны процесса тендера"
+                },
+                "slides": [
+                  "assets/tender-workflow-1.png",
+                  "assets/tender-workflow-2.png",
+                  "assets/tender-workflow-3.png"
+                ]
               }
             },
             {
-              "heading": "Role-Based Experience",
+              "heading": {
+                "en": "Role-Based Experience",
+                "ru": "Опыт под роль"
+              },
               "paragraphs": [
-                "Designed tailored experiences for tender organizers and contractors, giving each role access to relevant tools and workflows. This keeps the interface focused on users' tasks without unnecessary complexity."
+                {
+                  "en": "Designed tailored experiences for tender organizers and contractors, giving each role access to relevant tools and workflows. This keeps the interface focused on users' tasks without unnecessary complexity.",
+                  "ru": "Собрал отдельные сценарии для организаторов тендера и подрядчиков: у каждой роли свои инструменты и процессы. Интерфейс остаётся сосредоточенным на задаче пользователя, без лишней сложности."
+                }
               ],
               "figure": {
-                "src": "assets/tender-roles.png",
-                "alt": "Role-based tender experience",
-                "arrows": true
+                "src": "assets/tender-roles-1.png",
+                "alt": {
+                  "en": "Role-based tender experience",
+                  "ru": "Ролевой опыт в тендере"
+                },
+                "slides": [
+                  "assets/tender-roles-1.png",
+                  "assets/tender-roles-2.png",
+                  "assets/tender-roles-3.png"
+                ]
               }
             },
             {
-              "heading": "Contractor Evaluation",
+              "heading": {
+                "en": "Contractor Evaluation",
+                "ru": "Оценка подрядчиков"
+              },
               "paragraphs": [
-                "Created a structured evaluation process that helps organizers review applications, compare contractors, verify company information, and build shortlists. All the information needed to make a decision is accessible within a single workflow."
+                {
+                  "en": "Created a structured evaluation process that helps organizers review applications, compare contractors, verify company information, and build shortlists. All the information needed to make a decision is accessible within a single workflow.",
+                  "ru": "Сделал структурированный процесс оценки: организатор разбирает заявки, сравнивает подрядчиков, проверяет сведения о компании и собирает шорт-лист. Всё, что нужно для решения, доступно в одном сценарии."
+                }
               ],
               "figure": {
-                "src": "assets/tender-evaluation.png",
-                "alt": "Contractor evaluation",
-                "arrows": true
+                "src": "assets/tender-evaluation-1.png",
+                "alt": {
+                  "en": "Contractor evaluation",
+                  "ru": "Оценка подрядчиков"
+                },
+                "slides": [
+                  "assets/tender-evaluation-1.png",
+                  "assets/tender-evaluation-2.png",
+                  "assets/tender-evaluation-3.png",
+                  "assets/tender-evaluation-4.png",
+                  "assets/tender-evaluation-5.png",
+                  "assets/tender-evaluation-6.png"
+                ]
               }
             }
           ]
         },
         {
           "id": "conclusion",
-          "nav": "Conclusion",
-          "kicker": "Conclusion",
-          "heading": "From requirements to a cohesive product",
+          "nav": {
+            "en": "Conclusion",
+            "ru": "Итог"
+          },
+          "kicker": {
+            "en": "Conclusion",
+            "ru": "Итог"
+          },
+          "heading": {
+            "en": "From requirements to a cohesive product",
+            "ru": "От требований к цельному продукту"
+          },
           "paragraphs": [
-            "Designing this platform from scratch required more than creating interfaces. The key challenge was to structure complex business processes into a clear, consistent experience for different user roles.",
-            "The result is a scalable product design that connects tender management, contractor evaluation, and decision-making into one unified workflow."
+            {
+              "en": "Designing this platform from scratch required more than creating interfaces. The key challenge was to structure complex business processes into a clear, consistent experience for different user roles.",
+              "ru": "Проектировать платформу с нуля значило больше, чем нарисовать экраны. Ключевой задачей было разложить сложные бизнес-процессы в ясный и цельный опыт для разных ролей."
+            },
+            {
+              "en": "The result is a scalable product design that connects tender management, contractor evaluation, and decision-making into one unified workflow.",
+              "ru": "В итоге получился масштабируемый дизайн продукта, который связывает управление тендерами, оценку подрядчиков и принятие решений в одном процессе."
+            }
           ],
           "insights": []
         }
       ]
     }
-  ]
+  ],
+  "defaultLocale": "en"
 }

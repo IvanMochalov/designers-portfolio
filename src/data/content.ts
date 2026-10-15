@@ -1,5 +1,6 @@
 import site from "./site.json";
-import type { Block, Project, Section, SiteContent } from "./types";
+import { localizedContent } from "./localize";
+import type { Block, Project, Section } from "./types";
 
 const blockTypes = new Set<Block["type"]>([
   "text",
@@ -11,18 +12,26 @@ const blockTypes = new Set<Block["type"]>([
   "nda",
 ]);
 
-export const content = site as SiteContent;
+/** English snapshot for tests. Screens read the active locale through useSite(). */
+export const content = localizedContent(site, "en");
 
 export function visibleSections(project: Project): Section[] {
   return project.sections.filter((section) => section.hidden !== true);
 }
 
-export function projectBySlug(slug: string): Project | undefined {
-  return content.projects.find((project) => project.slug === slug);
+export function projectsNewestFirst(projects: Project[]): Project[] {
+  return projects
+    .map((project, index) => ({ project, index }))
+    .sort((left, right) => {
+      const byYear = Number(right.project.year) - Number(left.project.year);
+      if (byYear !== 0) return byYear;
+      return right.index - left.index;
+    })
+    .map((item) => item.project);
 }
 
-export function otherProjects(slug: string): Project[] {
-  return content.projects.filter((project) => project.slug !== slug);
+export function projectBySlug(projects: Project[], slug: string): Project | undefined {
+  return projects.find((project) => project.slug === slug);
 }
 
 export function isBlockType(value: string): value is Block["type"] {

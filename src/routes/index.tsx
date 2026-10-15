@@ -1,21 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect } from "react";
 import { IdentityBlock } from "../components/IdentityBlock";
 import { ProjectCard } from "../components/ProjectCard";
-import { content } from "../data/content";
+import { projectsNewestFirst } from "../data/content";
+import { useSite } from "../components/LocaleProvider";
 
 function HomePage() {
-  useEffect(() => {
-    if (window.location.hash === "#work") {
-      document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
-    }
-  }, []);
+  const projects = projectsNewestFirst(useSite().content.projects);
 
   return (
     <main>
       <IdentityBlock />
       <section id="work" className="project-grid">
-        {content.projects.map((project) => (
+        {projects.map((project) => (
           <ProjectCard key={project.slug} project={project} />
         ))}
       </section>
