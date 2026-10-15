@@ -81,6 +81,27 @@ body { margin: 0; }
 
 button, a { font: inherit; color: inherit; }
 
+.fluid-svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.fluid-surface {
+  position: fixed;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  visibility: hidden;
+  backdrop-filter: url("#fluid-displace");
+  -webkit-backdrop-filter: url("#fluid-displace");
+}
+
+.fluid-surface.is-active {
+  visibility: visible;
+}
+
 .page {
   --page-inset: 40px;
   --page-pad: 40px;
