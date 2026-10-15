@@ -5,11 +5,11 @@ import type { SiteContent } from "../data/types";
 
 const STORAGE_KEY = "site-locale";
 const CYRILLIC_SAMPLE = "Артём";
-const MANROPE_WEIGHTS = [400, 500, 600];
+const INVOLVE_WEIGHTS = [400, 500, 600];
 
-export function loadManropeCyrillic(): Promise<void> {
+export function loadInvolveCyrillic(): Promise<void> {
   return Promise.all(
-    MANROPE_WEIGHTS.map((weight) => document.fonts.load(`${weight} 16px Manrope`, CYRILLIC_SAMPLE)),
+    INVOLVE_WEIGHTS.map((weight) => document.fonts.load(`${weight} 16px Involve`, CYRILLIC_SAMPLE)),
   ).then(() => undefined);
 }
 
@@ -38,7 +38,7 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
   }, [locale]);
 
   useEffect(() => {
-    void loadManropeCyrillic().catch(() => undefined);
+    void loadInvolveCyrillic().catch(() => undefined);
   }, []);
 
   const value = useMemo<LocaleState>(
@@ -51,7 +51,7 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
           setLocale("en");
           return;
         }
-        void loadManropeCyrillic()
+        void loadInvolveCyrillic()
           .catch(() => undefined)
           .then(() => setLocale("ru"));
       },
