@@ -461,7 +461,6 @@ button, a { font: inherit; color: inherit; }
   transition: background 0.16s ease;
 }
 
-.carousel-btn:disabled { cursor: default; }
 .carousel-btn img { width: 16px; height: 16px; transition: opacity 0.16s ease; }
 .carousel-btn img.is-hover {
   position: absolute;
@@ -470,12 +469,12 @@ button, a { font: inherit; color: inherit; }
   opacity: 0;
   transform: translate(-50%, -50%);
 }
-.carousel-btn:hover:not(:disabled),
-.carousel-btn:focus-visible:not(:disabled) { background: #fff; }
-.carousel-btn:hover:not(:disabled) img.is-hover,
-.carousel-btn:focus-visible:not(:disabled) img.is-hover { opacity: 1; }
-.carousel-btn:hover:not(:disabled) img:not(.is-hover),
-.carousel-btn:focus-visible:not(:disabled) img:not(.is-hover) { opacity: 0; }
+.carousel-btn:hover,
+.carousel-btn:focus-visible { background: #fff; }
+.carousel-btn:hover img.is-hover,
+.carousel-btn:focus-visible img.is-hover { opacity: 1; }
+.carousel-btn:hover img:not(.is-hover),
+.carousel-btn:focus-visible img:not(.is-hover) { opacity: 0; }
 .carousel-btn.prev { left: 4px; }
 .carousel-btn.next { right: 4px; }
 .carousel-btn.next img:not(.is-hover) { transform: rotate(180deg); }
