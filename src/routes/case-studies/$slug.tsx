@@ -2,7 +2,7 @@ import { useRef, useState, type TransitionEvent } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { assetUrl } from "../../data/assets";
 import { projectBySlug, visibleSections } from "../../data/content";
-import { useSite } from "../../components/LocaleProvider";
+import { useSite } from "../../components/LocaleProvider/LocaleProvider";
 import type { CaseFigure, CaseSlide, Project } from "../../data/types";
 
 type SlideView = { src: string; fit: "cover" | "contain"; align: "left" | "center" };

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { assetUrl } from "../data/assets";
-import { useSite } from "./LocaleProvider";
+import { assetUrl } from "../../data/assets";
+import { useSite } from "../LocaleProvider/LocaleProvider";
+import styles from "./SiteFooter.module.css";
 
 export function SiteFooter() {
   const [copied, setCopied] = useState(false);
@@ -21,29 +22,29 @@ export function SiteFooter() {
   }
 
   return (
-    <footer className="site-footer">
-      <div className="footer-rule" />
-      <div className="footer-grid">
-        <div className="footer-brand">
-          <img className="wordmark" src={assetUrl(profile.wordmark)} alt="artyom.k" />
-          <p className="footer-tagline">{profile.tagline}</p>
-          <p className="copyright">{profile.copyright}</p>
+    <footer className={styles.footer} data-reveal>
+      <div className={styles.rule} />
+      <div className={styles.grid}>
+        <div className={styles.brand}>
+          <img className={styles.wordmark} src={assetUrl(profile.wordmark)} alt="artyom.k" />
+          <p className={styles.tagline}>{profile.tagline}</p>
+          <p className={styles.copyright}>{profile.copyright}</p>
         </div>
-        <div className="footer-links">
-          <p className="footer-label">{ui.linksTitle}</p>
+        <div className={styles.links}>
+          <p className={styles.label}>{ui.linksTitle}</p>
           {ui.nav.map((item) => (
             <Link key={item.to} to={item.to}>
               {item.label}
             </Link>
           ))}
         </div>
-        <div className="footer-contact">
-          <p className="footer-label">{ui.contactTitle}</p>
-          <button type="button" className="copy-email" onClick={() => void copyEmail()}>
+        <div className={styles.contact}>
+          <p className={styles.label}>{ui.contactTitle}</p>
+          <button type="button" className={styles.copy} onClick={() => void copyEmail()}>
             {copied ? ui.copied : profile.email}
           </button>
           <a href={scheduleHref}>{ui.schedule}</a>
-          <div className="socials">
+          <div className={styles.socials}>
             {profile.social.map((item) =>
               item.href ? (
                 <a key={item.icon} href={item.href}>

@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState, type MouseEvent } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
-import { assetUrl } from "../data/assets";
-import { projectBySlug, visibleSections } from "../data/content";
-import { LocaleButton, useSite } from "./LocaleProvider";
+import { assetUrl } from "../../data/assets";
+import { projectBySlug, visibleSections } from "../../data/content";
+import chrome from "../chrome.module.css";
+import { LocaleButton, useSite } from "../LocaleProvider/LocaleProvider";
+import styles from "./CaseHeader.module.css";
 
 function sectionScrollTop(node: HTMLElement) {
-  const header = document.querySelector(".case-topbar");
+  const header = document.querySelector("[data-case-topbar]");
   const headerHeight = header?.getBoundingClientRect().height ?? 0;
   const stickyTop = header ? Number.parseFloat(getComputedStyle(header).top) || 0 : 0;
   const anchor = node.querySelector(".kicker") ?? node;
@@ -80,7 +82,7 @@ export function CaseHeader() {
         setActive(nodes[nodes.length - 1].id);
         return;
       }
-      const header = document.querySelector(".case-topbar");
+      const header = document.querySelector("[data-case-topbar]");
       const marker = (header?.getBoundingClientRect().bottom ?? 80) + 24;
       let current = nodes[0].id;
       for (const node of nodes) {
@@ -127,24 +129,24 @@ export function CaseHeader() {
   }
 
   return (
-    <header className="case-topbar">
-      <Link to="/" className="back-pill" aria-label={projectsLabel}>
+    <header className={styles.topbar} data-case-topbar>
+      <Link to="/" className={styles.back} aria-label={projectsLabel}>
         <img src={assetUrl("assets/arrow-left.svg")} alt="" />
-        <span className="back-label">{projectsLabel}</span>
+        <span className={styles.label}>{projectsLabel}</span>
       </Link>
-      <nav className="nav-pill case-anchors" aria-label="Sections">
+      <nav className={styles.anchors} aria-label="Sections">
         {sections.map((section) => (
           <a
             key={section.id}
             href={`#${section.id}`}
-            className={section.id === active ? "nav-link is-active" : "nav-link"}
+            className={section.id === active ? `${chrome.link} ${chrome.active}` : chrome.link}
             onClick={(event) => onSectionClick(event, section.id)}
           >
             {section.nav}
           </a>
         ))}
       </nav>
-      <LocaleButton />
+      <LocaleButton className={styles.locale} />
     </header>
   );
 }

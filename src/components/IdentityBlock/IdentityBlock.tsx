@@ -1,7 +1,8 @@
 import { useNavigate } from "@tanstack/react-router";
-import { assetUrl } from "../data/assets";
-import { projectsNewestFirst } from "../data/content";
-import { useSite } from "./LocaleProvider";
+import { assetUrl } from "../../data/assets";
+import { projectsNewestFirst } from "../../data/content";
+import { useSite } from "../LocaleProvider/LocaleProvider";
+import styles from "./IdentityBlock.module.css";
 
 export function IdentityBlock() {
   const navigate = useNavigate();
@@ -15,10 +16,10 @@ export function IdentityBlock() {
   }
 
   return (
-    <section className="identity">
+    <section className={styles.root}>
       <h1>{profile.name}</h1>
       <p>{profile.summary}</p>
-      <div className="actions">
+      <div className={styles.actions}>
         <button type="button" className="button button-primary" onClick={onLatestWork}>
           {ui.latestWork}
           <span className="button-icon" aria-hidden="true">

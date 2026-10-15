@@ -1,7 +1,8 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
-import site from "../data/site.json";
-import { localizedContent, type Locale } from "../data/localize";
-import type { SiteContent } from "../data/types";
+import site from "../../data/site.json";
+import { localizedContent, type Locale } from "../../data/localize";
+import type { SiteContent } from "../../data/types";
+import styles from "./LocaleProvider.module.css";
 
 const STORAGE_KEY = "site-locale";
 const CYRILLIC_SAMPLE = "Артём";
@@ -68,12 +69,13 @@ export function useSite(): LocaleState {
   return value;
 }
 
-export function LocaleButton() {
+export function LocaleButton({ className }: { className?: string }) {
   const { content, otherLabel, toggleLocale } = useSite();
+  const pill = className ? `${styles.pill} ${className}` : styles.pill;
 
   return (
-    <button type="button" className="locale-pill" aria-label={content.ui.switchTo} onClick={toggleLocale}>
-      <span>{otherLabel}</span>
+    <button type="button" className={pill} aria-label={content.ui.switchTo} onClick={toggleLocale}>
+      <span className={styles.label}>{otherLabel}</span>
     </button>
   );
 }

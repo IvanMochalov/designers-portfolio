@@ -1,8 +1,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
-import { FluidSurface } from "./components/FluidSurface";
-import { LocaleProvider } from "./components/LocaleProvider";
+import { FluidSurface } from "./components/FluidSurface/FluidSurface";
+import { LocaleProvider } from "./components/LocaleProvider/LocaleProvider";
 import { routeTree } from "./routeTree.gen";
 import "./styles.css";
 

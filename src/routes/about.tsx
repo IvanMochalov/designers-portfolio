@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { IdentityBlock } from "../components/IdentityBlock";
+import { IdentityBlock } from "../components/IdentityBlock/IdentityBlock";
 import { assetUrl } from "../data/assets";
-import { useSite } from "../components/LocaleProvider";
+import { useSite } from "../components/LocaleProvider/LocaleProvider";
 
 function AboutPage() {
   const { about, profile, ui } = useSite().content;

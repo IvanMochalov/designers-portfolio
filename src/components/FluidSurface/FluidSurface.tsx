@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { addStroke, createFluid, stepFluid, writeDisplacement } from "./fluidField";
+import styles from "./FluidSurface.module.css";
 
 /** Сторона сетки жидкости. Больше — мельче рябь и тяжелее кадр. */
 const GRID = 128;
@@ -47,10 +48,10 @@ export function FluidSurface() {
       upload();
       if (energy < SLEEP) {
         running = false;
-        layer.classList.remove("is-active");
+        layer.classList.remove(styles.active);
         return;
       }
-      layer.classList.add("is-active");
+      layer.classList.add(styles.active);
       frame = window.requestAnimationFrame(tick);
     };
 
@@ -93,7 +94,7 @@ export function FluidSurface() {
     document.documentElement.addEventListener("mouseleave", onLeave);
     return () => {
       window.cancelAnimationFrame(frame);
-      layer.classList.remove("is-active");
+      layer.classList.remove(styles.active);
       window.removeEventListener("pointermove", onPointer);
       document.documentElement.removeEventListener("pointerleave", onLeave);
       document.documentElement.removeEventListener("mouseleave", onLeave);
@@ -102,8 +103,8 @@ export function FluidSurface() {
 
   return (
     <>
-      <div ref={layerRef} className="fluid-surface" aria-hidden="true" />
-      <svg className="fluid-svg" aria-hidden="true">
+      <div ref={layerRef} className={styles.surface} aria-hidden="true" />
+      <svg className={styles.svg} aria-hidden="true">
         <filter id="fluid-displace" x="0%" y="0%" width="100%" height="100%" colorInterpolationFilters="sRGB">
           <feImage id="fluid-map" result="map" preserveAspectRatio="none" />
           <feDisplacementMap

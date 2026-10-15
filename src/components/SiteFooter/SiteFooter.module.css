@@ -1,0 +1,132 @@
+.footer {
+  padding: 80px 0;
+}
+
+.rule {
+  height: 1px;
+  margin-bottom: 64px;
+  background: #e8eaed;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 560px) 264px minmax(0, 1fr);
+  gap: 32px;
+}
+
+.wordmark {
+  display: block;
+  width: 143px;
+  height: 24px;
+}
+
+.tagline {
+  max-width: 440px;
+  margin: 12px 0;
+  color: #717880;
+  font-size: 16px;
+  line-height: 1.45;
+  white-space: pre-line;
+}
+
+.copyright {
+  margin: 0;
+  color: #717880;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.label {
+  margin: 0 0 16px;
+  color: #04111f;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.grid a,
+.copy {
+  display: block;
+  margin: 0 0 10px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #5b5f63;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.grid a:hover,
+.copy:hover {
+  color: #04111f;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+.socials img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .grid a,
+  .copy {
+    transition: color 0.25s ease;
+  }
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: minmax(0, 1.6fr) minmax(140px, 0.9fr) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .footer {
+    padding: 40px 0;
+  }
+
+  .rule {
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .brand {
+    display: contents;
+  }
+
+  .wordmark {
+    order: 1;
+  }
+
+  .tagline {
+    order: 2;
+    max-width: none;
+  }
+
+  .links {
+    order: 3;
+  }
+
+  .contact {
+    order: 4;
+  }
+
+  .copyright {
+    order: 5;
+    margin-top: 8px;
+  }
+}
