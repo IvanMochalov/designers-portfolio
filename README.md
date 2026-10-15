@@ -70,4 +70,17 @@ npm run dev
 
 Сборка — `npm run build`, проверка данных — `npm test`.
 
+## Публикация
+
+Сайт публикуется на GitHub Pages: https://ivanmochalov.github.io/designers-portfolio/
+
+Выкладка запускается, когда в репозиторий попадает тег:
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+Для этой сборки у Vite базовый путь `/designers-portfolio/`. Локально `npm run dev` и обычный `npm run build` по-прежнему открываются с корня сайта.
+
 Как править тексты, картинки и кейсы: [docs/content.md](docs/content.md).

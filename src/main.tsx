@@ -5,7 +5,12 @@ import { LocaleProvider } from "./components/LocaleProvider";
 import { routeTree } from "./routeTree.gen";
 import "./styles.css";
 
-const router = createRouter({ routeTree });
+const basepath = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+const router = createRouter({
+  routeTree,
+  ...(basepath ? { basepath } : {}),
+});
 
 declare module "@tanstack/react-router" {
   interface Register {
