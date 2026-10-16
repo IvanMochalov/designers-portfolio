@@ -1,26 +1,26 @@
 @media (prefers-reduced-motion: no-preference) {
-  :global(.project-grid > *),
-  :global(.masonry > *) {
+  .project-grid > *,
+  .masonry > * {
     opacity: 0;
     transform: scale(0.7);
     transform-origin: center;
   }
 
-  :global(.project-grid > *[data-in="1"]),
-  :global(.masonry > *[data-in="1"]) {
+  .project-grid > *[data-in="1"],
+  .masonry > *[data-in="1"] {
     animation: grow-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
-  :global(main > :not(.project-grid):not(.masonry):not(.case-column)),
-  :global(.case-column > *),
-  :global([data-reveal]) {
+  main > :not(.project-grid):not(.masonry):not(.case-column),
+  .case-column > *,
+  [data-reveal] {
     opacity: 0;
     transform: translateY(16px);
   }
 
-  :global(main > :not(.project-grid):not(.masonry):not(.case-column)[data-in="1"]),
-  :global(.case-column > [data-in="1"]),
-  :global([data-reveal][data-in="1"]) {
+  main > :not(.project-grid):not(.masonry):not(.case-column)[data-in="1"],
+  .case-column > [data-in="1"],
+  [data-reveal][data-in="1"] {
     animation: rise-in 1.15s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 }

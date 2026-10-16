@@ -1,6 +1,6 @@
 import { useLayoutEffect } from "react";
 import { useRouterState } from "@tanstack/react-router";
-import "./ScrollReveal.module.css";
+import "./ScrollReveal.css";
 
 const REVEAL = [
   ".project-grid > *",
