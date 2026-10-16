@@ -1,24 +1,10 @@
-import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { assetUrl } from "../../data/assets";
 import { useSite } from "../LocaleProvider/LocaleProvider";
 import styles from "./SiteFooter.module.css";
 
 export function SiteFooter() {
-  const [copied, setCopied] = useState(false);
   const { profile, ui } = useSite().content;
-
-  async function copyEmail() {
-    try {
-      await navigator.clipboard.writeText(profile.email);
-    } catch {
-      setCopied(true);
-      window.setTimeout(() => setCopied(false), 1600);
-      return;
-    }
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1600);
-  }
 
   return (
     <footer className={styles.footer} data-reveal>
@@ -39,9 +25,9 @@ export function SiteFooter() {
         </div>
         <div className={styles.contact}>
           <p className={styles.label}>{ui.contactTitle}</p>
-          <button type="button" className={styles.copy} onClick={() => void copyEmail()}>
-            {copied ? ui.copied : profile.email}
-          </button>
+          <a className={styles.copy} href={`mailto:${profile.email}`}>
+            {profile.email}
+          </a>
           <div className={styles.socials}>
             {profile.social.map((item) =>
               item.href ? (
