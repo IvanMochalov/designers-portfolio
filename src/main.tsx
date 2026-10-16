@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { FluidSurface } from "./components/FluidSurface/FluidSurface";
+import stage from "./components/FluidSurface/FluidSurface.module.css";
 import { LocaleProvider } from "./components/LocaleProvider/LocaleProvider";
 import { routeTree } from "./routeTree.gen";
 import "./styles.css";
@@ -26,7 +27,9 @@ createRoot(root).render(
   <StrictMode>
     <LocaleProvider>
       <FluidSurface />
-      <RouterProvider router={router} />
+      <div className={stage.stage}>
+        <RouterProvider router={router} />
+      </div>
     </LocaleProvider>
   </StrictMode>,
 );

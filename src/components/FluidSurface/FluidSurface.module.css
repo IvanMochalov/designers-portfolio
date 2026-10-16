@@ -1,20 +1,13 @@
-.svg {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-
-.surface {
+.canvas {
   position: fixed;
   inset: 0;
-  z-index: 6;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
-  visibility: hidden;
-  backdrop-filter: url("#fluid-displace");
-  -webkit-backdrop-filter: url("#fluid-displace");
 }
 
-.active {
-  visibility: visible;
+.stage {
+  position: relative;
+  z-index: 1;
 }
