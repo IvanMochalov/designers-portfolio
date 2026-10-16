@@ -119,6 +119,11 @@ export type SocialLink = {
   href: string;
 };
 
+export type PageSeo = {
+  title: string;
+  description: string;
+};
+
 export type SiteContent = {
   profile: {
     name: string;
@@ -131,6 +136,7 @@ export type SiteContent = {
     copyright: string;
     social: SocialLink[];
   };
+  seo: Record<string, PageSeo>;
   ui: {
     nav: NavItem[];
     switchTo: string;

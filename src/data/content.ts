@@ -1,6 +1,6 @@
 import site from "./site.json";
 import { localizedContent } from "./localize";
-import type { Block, Project, Section } from "./types";
+import type { Block, PageSeo, Project, Section, SiteContent } from "./types";
 
 const blockTypes = new Set<Block["type"]>([
   "text",
@@ -28,6 +28,21 @@ export function projectsNewestFirst(projects: Project[]): Project[] {
       return right.index - left.index;
     })
     .map((item) => item.project);
+}
+
+const PAGE_SEO: Record<string, string> = {
+  "/": "projects",
+  "/experiments": "experiments",
+  "/about": "about",
+  "/resume": "resume",
+};
+
+const CASE_PREFIX = "/case-studies/";
+
+export function pageSeo(content: SiteContent, pathname: string): PageSeo | undefined {
+  if (pathname.startsWith(CASE_PREFIX)) return content.seo[pathname.slice(CASE_PREFIX.length)];
+  const key = PAGE_SEO[pathname];
+  return key ? content.seo[key] : undefined;
 }
 
 export function projectBySlug(projects: Project[], slug: string): Project | undefined {

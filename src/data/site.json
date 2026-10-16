@@ -8,7 +8,7 @@
       "en": "Product Designer turning complex workflows, data, and business logic into clear, intuitive interfaces.",
       "ru": "Продуктовый дизайнер: превращаю сложные процессы, данные и бизнес-логику в понятные интерфейсы."
     },
-    "avatar": "assets/profile/portrait.png",
+    "avatar": "assets/profile/portrait.jpg",
     "email": "kashkarov.artyom@gmail.com",
     "scheduleUrl": "",
     "tagline": {
@@ -46,6 +46,68 @@
         "href": "https://www.instagram.com/ap4em"
       }
     ]
+  },
+  "seo": {
+    "projects": {
+      "title": {
+        "en": "Projects — Product Design & UX/UI Portfolio | Artyom",
+        "ru": "Проекты — Артём | Портфолио Product Designer"
+      },
+      "description": {
+        "en": "A collection of my work in product design, focused on solving complex challenges, creating intuitive experiences, and building thoughtful digital solutions.",
+        "ru": "Подборка моих работ в продуктовом дизайне. Проектирую цифровые продукты, превращая сложные задачи в понятные, удобные и продуманные интерфейсы."
+      }
+    },
+    "about": {
+      "title": {
+        "en": "About Artyom — Product Designer & UX/UI",
+        "ru": "Обо мне — Артём | Продуктовый дизайнер"
+      },
+      "description": {
+        "en": "I'm Artyom, a Product Designer focused on complex digital systems. Learn about my experience, design philosophy, skills, and approach to creating better products.",
+        "ru": "Я Артём, продуктовый дизайнер сложных цифровых систем. Рассказываю о своём опыте, профессиональном пути, ценностях и подходе к проектированию интерфейсов."
+      }
+    },
+    "resume": {
+      "title": {
+        "en": "Artyom — Product Designer Resume | B2B & Design Systems",
+        "ru": "Резюме — Артём | Product Designer, B2B и UX/UI"
+      },
+      "description": {
+        "en": "Explore my professional experience, skills, and background in product design. Specialized in B2B applications, complex UX/UI, enterprise software, and design systems.",
+        "ru": "Резюме продуктового дизайнера с опытом более 5 лет. Специализация: сложные B2B-интерфейсы, корпоративные сервисы, UX/UI и разработка дизайн-систем."
+      }
+    },
+    "experiments": {
+      "title": {
+        "en": "Design Experiments — AI, Motion & UI Concepts | Artyom",
+        "ru": "Эксперименты — Артём | AI, UI и Motion Design"
+      },
+      "description": {
+        "en": "Exploring new ideas in digital design through AI, motion, interactive interfaces, creative coding, and experimental product concepts.",
+        "ru": "Эксперименты с интерфейсами, анимацией, искусственным интеллектом и новыми технологиями. Исследую нестандартные подходы к цифровому дизайну."
+      }
+    },
+    "crm-platform-for-managing-room-bookings": {
+      "title": {
+        "en": "CRM Design Case Study — Room Booking System | Artyom",
+        "ru": "CRM — система бронирования помещений | Артём"
+      },
+      "description": {
+        "en": "UX/UI case study of a room booking CRM, featuring calendar management, client profiles, occupancy analytics, and simplified workflows for administrators.",
+        "ru": "UX/UI-кейс CRM для бронирования помещений: календарь загрузки, профили клиентов, аналитика занятости и упрощённые сценарии для администраторов."
+      }
+    },
+    "construction-tender-management": {
+      "title": {
+        "en": "B2B Tender Platform — Product Design Case Study | Artyom",
+        "ru": "B2B-платформа тендеров — кейс продуктового дизайна | Артём"
+      },
+      "description": {
+        "en": "Designing a B2B construction tender platform from scratch. Explore tender workflows, role-based interfaces, contractor evaluation, and selection processes.",
+        "ru": "Проектирование B2B-платформы строительных тендеров с нуля: тендерные процессы, ролевые интерфейсы, оценка подрядчиков и выбор победителя."
+      }
+    }
   },
   "ui": {
     "nav": [
@@ -172,7 +234,7 @@
     }
   ],
   "about": {
-    "portrait": "assets/about/about-portrait-tone.png",
+    "portrait": "assets/about/about-portrait-tone.jpg",
     "portraitAlt": {
       "en": "Artyom Kashkarov",
       "ru": "Артём Кашкаров"
@@ -217,77 +279,77 @@
           "en": "AI tools",
           "ru": "Инструменты ИИ"
         },
-        "icon": "assets/about/interest-ai.png"
+        "icon": "assets/about/interest-ai.jpg"
       },
       {
         "label": {
           "en": "Minimal interfaces",
           "ru": "Минималистичные интерфейсы"
         },
-        "icon": "assets/about/interest-minimal.png"
+        "icon": "assets/about/interest-minimal.jpg"
       },
       {
         "label": {
           "en": "Football",
           "ru": "Футбол"
         },
-        "icon": "assets/about/interest-football.png"
+        "icon": "assets/about/interest-football.jpg"
       },
       {
         "label": {
           "en": "Tennis",
           "ru": "Теннис"
         },
-        "icon": "assets/about/interest-tennis.png"
+        "icon": "assets/about/interest-tennis.jpg"
       },
       {
         "label": {
           "en": "Techno music",
           "ru": "Техно"
         },
-        "icon": "assets/about/interest-techno.png"
+        "icon": "assets/about/interest-techno.jpg"
       },
       {
         "label": {
           "en": "Long walks",
           "ru": "Долгие прогулки"
         },
-        "icon": "assets/about/interest-walks.png"
+        "icon": "assets/about/interest-walks.jpg"
       },
       {
         "label": {
           "en": "Gym",
           "ru": "Зал"
         },
-        "icon": "assets/about/interest-gym.png"
+        "icon": "assets/about/interest-gym.jpg"
       },
       {
         "label": {
           "en": "Ramen",
           "ru": "Рамен"
         },
-        "icon": "assets/about/interest-ramen.png"
+        "icon": "assets/about/interest-ramen.jpg"
       },
       {
         "label": {
           "en": "Complex tasks",
           "ru": "Сложные задачи"
         },
-        "icon": "assets/about/interest-complex.png"
+        "icon": "assets/about/interest-complex.jpg"
       },
       {
         "label": {
           "en": "Design systems",
           "ru": "Дизайн-системы"
         },
-        "icon": "assets/about/interest-systems.png"
+        "icon": "assets/about/interest-systems.jpg"
       },
       {
         "label": {
           "en": "Future of technology",
           "ru": "Будущее технологий"
         },
-        "icon": "assets/about/interest-future.png"
+        "icon": "assets/about/interest-future.jpg"
       }
     ],
     "valuesTitle": {
@@ -350,7 +412,7 @@
     },
     "path": [
       {
-        "src": "assets/about/path-drawing.png",
+        "src": "assets/about/path-drawing.jpg",
         "alt": {
           "en": "Pencil drawing over a blueprint",
           "ru": "Карандашный рисунок поверх чертежа"
@@ -361,7 +423,7 @@
         }
       },
       {
-        "src": "assets/about/path-graphic.png",
+        "src": "assets/about/path-graphic.jpg",
         "alt": {
           "en": "Tablet with a graphic design sketch",
           "ru": "Планшет с эскизом графического дизайна"
@@ -372,7 +434,7 @@
         }
       },
       {
-        "src": "assets/about/path-ux.png",
+        "src": "assets/about/path-ux.jpg",
         "alt": {
           "en": "Design system file in an editor",
           "ru": "Файл дизайн-системы в редакторе"
@@ -383,7 +445,7 @@
         }
       },
       {
-        "src": "assets/about/path-systems.png",
+        "src": "assets/about/path-systems.jpg",
         "alt": {
           "en": "Screens of a digital product",
           "ru": "Экраны цифрового продукта"

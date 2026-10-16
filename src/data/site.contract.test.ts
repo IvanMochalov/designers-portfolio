@@ -1,7 +1,7 @@
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { content, isBlockType, projectsNewestFirst, visibleSections } from "./content";
+import { content, isBlockType, pageSeo, projectsNewestFirst, visibleSections } from "./content";
 import { isCopy, localizedContent } from "./localize";
 import raw from "./site.json";
 import type { Project } from "./types";
@@ -33,6 +33,36 @@ describe("site content", () => {
       "Resume",
     ]);
     expect(content.ui.switchTo).toBe("Switch language to Russian");
+    expect(content.seo.projects).toEqual({
+      title: "Projects — Product Design & UX/UI Portfolio | Artyom",
+      description:
+        "A collection of my work in product design, focused on solving complex challenges, creating intuitive experiences, and building thoughtful digital solutions.",
+    });
+    expect(pageSeo(content, "/")).toBe(content.seo.projects);
+    expect(content.seo.about).toEqual({
+      title: "About Artyom — Product Designer & UX/UI",
+      description:
+        "I'm Artyom, a Product Designer focused on complex digital systems. Learn about my experience, design philosophy, skills, and approach to creating better products.",
+    });
+    expect(pageSeo(content, "/about")).toBe(content.seo.about);
+    expect(content.seo.resume).toEqual({
+      title: "Artyom — Product Designer Resume | B2B & Design Systems",
+      description:
+        "Explore my professional experience, skills, and background in product design. Specialized in B2B applications, complex UX/UI, enterprise software, and design systems.",
+    });
+    expect(pageSeo(content, "/resume")).toBe(content.seo.resume);
+    expect(content.seo.experiments).toEqual({
+      title: "Design Experiments — AI, Motion & UI Concepts | Artyom",
+      description:
+        "Exploring new ideas in digital design through AI, motion, interactive interfaces, creative coding, and experimental product concepts.",
+    });
+    expect(pageSeo(content, "/experiments")).toBe(content.seo.experiments);
+    expect(pageSeo(content, "/case-studies/crm-platform-for-managing-room-bookings")?.title).toBe(
+      "CRM Design Case Study — Room Booking System | Artyom",
+    );
+    expect(pageSeo(content, "/case-studies/construction-tender-management")?.title).toBe(
+      "B2B Tender Platform — Product Design Case Study | Artyom",
+    );
   });
 
   it("lists the two case studies and their section anchors", () => {
@@ -113,6 +143,28 @@ describe("site content", () => {
     expect(russian.profile.email).toBe(content.profile.email);
     expect(russian.projects[1]?.brief.items?.[0]?.text).not.toBe(content.projects[1]?.brief.items?.[0]?.text);
     expect(russian.ui.switchTo).toBe("Переключить язык на английский");
+    expect(russian.seo.projects.title).toBe("Проекты — Артём | Портфолио Product Designer");
+    expect(russian.seo.projects.description).toBe(
+      "Подборка моих работ в продуктовом дизайне. Проектирую цифровые продукты, превращая сложные задачи в понятные, удобные и продуманные интерфейсы.",
+    );
+    expect(russian.seo.about.title).toBe("Обо мне — Артём | Продуктовый дизайнер");
+    expect(russian.seo.about.description).toBe(
+      "Я Артём, продуктовый дизайнер сложных цифровых систем. Рассказываю о своём опыте, профессиональном пути, ценностях и подходе к проектированию интерфейсов.",
+    );
+    expect(russian.seo.resume.title).toBe("Резюме — Артём | Product Designer, B2B и UX/UI");
+    expect(russian.seo.resume.description).toBe(
+      "Резюме продуктового дизайнера с опытом более 5 лет. Специализация: сложные B2B-интерфейсы, корпоративные сервисы, UX/UI и разработка дизайн-систем.",
+    );
+    expect(russian.seo.experiments.title).toBe("Эксперименты — Артём | AI, UI и Motion Design");
+    expect(russian.seo.experiments.description).toBe(
+      "Эксперименты с интерфейсами, анимацией, искусственным интеллектом и новыми технологиями. Исследую нестандартные подходы к цифровому дизайну.",
+    );
+    expect(russian.seo["crm-platform-for-managing-room-bookings"]?.title).toBe(
+      "CRM — система бронирования помещений | Артём",
+    );
+    expect(russian.seo["construction-tender-management"]?.description).toBe(
+      "Проектирование B2B-платформы строительных тендеров с нуля: тендерные процессы, ролевые интерфейсы, оценка подрядчиков и выбор победителя.",
+    );
 
     const visit = (value: unknown) => {
       if (isCopy(value)) {
