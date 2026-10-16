@@ -10,8 +10,12 @@
 
 .grid {
   display: grid;
-  grid-template-columns: minmax(0, 560px) 264px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 560px) minmax(0, 264px) auto;
   gap: 32px;
+}
+
+.brand {
+  min-width: 0;
 }
 
 .wordmark {

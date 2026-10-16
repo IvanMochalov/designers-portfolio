@@ -37,6 +37,9 @@ export function IdentityBlock() {
         </div>
         <a className="button button-secondary" href={`${import.meta.env.BASE_URL}resume.pdf`} download>
           {ui.pdfResume}
+          <span className="button-icon" aria-hidden="true">
+            <img src={assetUrl("assets/download.svg")} alt="" />
+          </span>
         </a>
       </div>
     </section>
