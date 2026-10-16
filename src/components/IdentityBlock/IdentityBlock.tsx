@@ -1,4 +1,4 @@
-import { useNavigate } from "@tanstack/react-router";
+import { useNavigate, useRouterState } from "@tanstack/react-router";
 import { assetUrl } from "../../data/assets";
 import { projectsNewestFirst } from "../../data/content";
 import { useSite } from "../LocaleProvider/LocaleProvider";
@@ -10,6 +10,7 @@ export function IdentityBlock() {
   const chatHref =
     profile.social.find((item) => item.href.includes("t.me/"))?.href ?? `mailto:${profile.email}`;
   const latest = projectsNewestFirst(projects)[0];
+  const showPdf = useRouterState({ select: (state) => state.location.pathname === "/resume" });
 
   function onLatestWork() {
     if (!latest) return;
@@ -35,12 +36,14 @@ export function IdentityBlock() {
             </span>
           </a>
         </div>
-        <a className="button button-secondary" href={`${import.meta.env.BASE_URL}resume.pdf`} download>
-          {ui.pdfResume}
-          <span className="button-icon" aria-hidden="true">
-            <img src={assetUrl("assets/download.svg")} alt="" />
-          </span>
-        </a>
+        {showPdf ? (
+          <a className={`button button-secondary ${styles.pdf}`} href={`${import.meta.env.BASE_URL}resume.pdf`} download>
+            {ui.pdfResume}
+            <span className="button-icon" aria-hidden="true">
+              <img src={assetUrl("assets/download.svg")} alt="" />
+            </span>
+          </a>
+        ) : null}
       </div>
     </section>
   );
