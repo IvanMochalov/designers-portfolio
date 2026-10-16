@@ -2,8 +2,14 @@ import { useEffect, useRef } from "react";
 import { addStroke, createFluid, stepFluid, writeDye } from "./fluidField";
 import styles from "./FluidSurface.module.css";
 
-/** Сторона сетки следа. Больше — мельче вихрь и тяжелее кадр. */
+/** Клеток по короткой стороне экрана. Больше — мельче вихрь и тяжелее кадр. */
 const GRID = 128;
+
+function gridSize(pixelWidth: number, pixelHeight: number) {
+  const aspect = pixelWidth / Math.max(1, pixelHeight);
+  if (aspect >= 1) return { width: Math.max(GRID, Math.round(GRID * aspect)), height: GRID };
+  return { width: GRID, height: Math.max(GRID, Math.round(GRID / aspect)) };
+}
 /** Радиус всплеска в клетках сетки. Больше — шире след от курсора. */
 const SPLAT_RADIUS = 7;
 /** Затухание скорости за кадр. Меньше — быстрее успокаивается. */
@@ -29,23 +35,28 @@ export function FluidSurface() {
     const view = canvas?.getContext("2d");
     if (!canvas || !view) return;
 
-    const field = createFluid(GRID, GRID);
+    let field = createFluid(GRID, GRID);
     const grid = document.createElement("canvas");
-    grid.width = GRID;
-    grid.height = GRID;
     const gridContext = grid.getContext("2d");
     if (!gridContext) return;
-    const image = gridContext.createImageData(GRID, GRID);
+    let image = gridContext.createImageData(GRID, GRID);
+    let previous: { u: number; v: number } | null = null;
 
     const resize = () => {
       const ratio = Math.min(window.devicePixelRatio || 1, 2);
       canvas.width = Math.max(1, Math.floor(window.innerWidth * ratio));
       canvas.height = Math.max(1, Math.floor(window.innerHeight * ratio));
+      const next = gridSize(canvas.width, canvas.height);
+      if (next.width === field.width && next.height === field.height) return;
+      field = createFluid(next.width, next.height);
+      grid.width = next.width;
+      grid.height = next.height;
+      image = gridContext.createImageData(next.width, next.height);
+      previous = null;
     };
 
     let frame = 0;
     let running = false;
-    let previous: { u: number; v: number } | null = null;
 
     const draw = () => {
       writeDye(field, image.data, ALPHA, PALE);
