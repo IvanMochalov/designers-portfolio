@@ -107,6 +107,16 @@
         "en": "Designing a B2B construction tender platform from scratch. Explore tender workflows, role-based interfaces, contractor evaluation, and selection processes.",
         "ru": "Проектирование B2B-платформы строительных тендеров с нуля: тендерные процессы, ролевые интерфейсы, оценка подрядчиков и выбор победителя."
       }
+    },
+    "not-found": {
+      "title": {
+        "en": "404 — Page Not Found | Artyom",
+        "ru": "404 — Страница не найдена | Артём"
+      },
+      "description": {
+        "en": "Looks like this page doesn't exist or has been moved. Head back to my portfolio to explore projects, experiments, and more.",
+        "ru": "Похоже, такой страницы не существует или она была перемещена. Вернитесь в портфолио, чтобы посмотреть проекты, эксперименты и другие разделы."
+      }
     }
   },
   "ui": {
@@ -205,6 +215,24 @@
     "backHome": {
       "en": "Back to projects",
       "ru": "К проектам"
+    },
+    "lost": {
+      "lead": {
+        "en": "Looks like ",
+        "ru": "Похоже, "
+      },
+      "rest": {
+        "en": "this page got lost.",
+        "ru": "эта страница потерялась."
+      },
+      "home": {
+        "en": "Back to home",
+        "ru": "На главную"
+      },
+      "contact": {
+        "en": "Get in touch",
+        "ru": "Связаться"
+      }
     },
     "switchTo": {
       "en": "Switch language to Russian",

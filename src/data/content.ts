@@ -35,6 +35,7 @@ const PAGE_SEO: Record<string, string> = {
   "/experiments": "experiments",
   "/about": "about",
   "/resume": "resume",
+  "/not-found": "not-found",
 };
 
 const CASE_PREFIX = "/case-studies/";

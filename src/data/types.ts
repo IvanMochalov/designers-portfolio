@@ -153,6 +153,12 @@ export type SiteContent = {
     metaLabels: ProjectMeta;
     notFound: string;
     backHome: string;
+    lost: {
+      lead: string;
+      rest: string;
+      home: string;
+      contact: string;
+    };
   };
   experiments: { title: string; src: string; alt: string }[];
   about: {

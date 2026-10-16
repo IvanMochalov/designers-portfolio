@@ -148,6 +148,35 @@ button, a { font: inherit; color: inherit; }
 
 .muted { color: #717880; }
 
+.lost {
+  padding: var(--section-pad) 0 0;
+}
+
+.lost h2 {
+  margin: 0 0 20px;
+  max-width: 550px;
+  color: #04111f;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.lost p {
+  max-width: 550px;
+  margin: 0;
+  color: #717880;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.lost-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 40px;
+}
+
 .split-title, .inline-title {
   margin: 0 0 40px;
   font-size: 28px;

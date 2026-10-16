@@ -63,6 +63,17 @@ describe("site content", () => {
     expect(pageSeo(content, "/case-studies/construction-tender-management")?.title).toBe(
       "B2B Tender Platform — Product Design Case Study | Artyom",
     );
+    expect(pageSeo(content, "/not-found")).toEqual({
+      title: "404 — Page Not Found | Artyom",
+      description:
+        "Looks like this page doesn't exist or has been moved. Head back to my portfolio to explore projects, experiments, and more.",
+    });
+    expect(content.ui.lost).toEqual({
+      lead: "Looks like ",
+      rest: "this page got lost.",
+      home: "Back to home",
+      contact: "Get in touch",
+    });
   });
 
   it("lists the two case studies and their section anchors", () => {
@@ -165,6 +176,16 @@ describe("site content", () => {
     expect(russian.seo["construction-tender-management"]?.description).toBe(
       "Проектирование B2B-платформы строительных тендеров с нуля: тендерные процессы, ролевые интерфейсы, оценка подрядчиков и выбор победителя.",
     );
+    expect(russian.seo["not-found"]?.title).toBe("404 — Страница не найдена | Артём");
+    expect(russian.seo["not-found"]?.description).toBe(
+      "Похоже, такой страницы не существует или она была перемещена. Вернитесь в портфолио, чтобы посмотреть проекты, эксперименты и другие разделы.",
+    );
+    expect(russian.ui.lost).toEqual({
+      lead: "Похоже, ",
+      rest: "эта страница потерялась.",
+      home: "На главную",
+      contact: "Связаться",
+    });
 
     const visit = (value: unknown) => {
       if (isCopy(value)) {

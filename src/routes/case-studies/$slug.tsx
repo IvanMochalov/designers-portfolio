@@ -1,7 +1,7 @@
 import { useRef, useState, type TransitionEvent } from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 import { assetUrl } from "../../data/assets";
-import { projectBySlug, visibleSections } from "../../data/content";
+import { content as catalog, projectBySlug, visibleSections } from "../../data/content";
 import { useSite } from "../../components/LocaleProvider/LocaleProvider";
 import type { CaseFigure, CaseSlide, Project } from "../../data/types";
 
@@ -132,14 +132,7 @@ function CaseStudyPage() {
   const { content } = useSite();
   const project = projectBySlug(content.projects, slug);
 
-  if (!project) {
-    return (
-      <section className="missing">
-        <h1>{content.ui.notFound}</h1>
-        <Link to="/">{content.ui.backHome}</Link>
-      </section>
-    );
-  }
+  if (!project) return null;
 
   const sections = visibleSections(project);
   const meta = (
@@ -220,5 +213,10 @@ function CaseStudyPage() {
 }
 
 export const Route = createFileRoute("/case-studies/$slug")({
+  beforeLoad: ({ params }) => {
+    if (!projectBySlug(catalog.projects, params.slug)) {
+      throw redirect({ to: "/not-found", replace: true });
+    }
+  },
   component: CaseStudyPage,
 });

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { createRootRoute, Link, Outlet, useRouterState } from "@tanstack/react-router";
+import { createRootRoute, Navigate, Outlet, useRouterState } from "@tanstack/react-router";
 import { CaseHeader } from "../components/CaseHeader/CaseHeader";
 import { IdentityBlock } from "../components/IdentityBlock/IdentityBlock";
 import { SiteFooter } from "../components/SiteFooter/SiteFooter";
@@ -39,13 +39,7 @@ function RootLayout() {
 }
 
 function NotFound() {
-  const { ui } = useSite().content;
-  return (
-    <section className="missing">
-      <h1>{ui.notFound}</h1>
-      <Link to="/">{ui.backHome}</Link>
-    </section>
-  );
+  return <Navigate to="/not-found" replace />;
 }
 
 export const Route = createRootRoute({
