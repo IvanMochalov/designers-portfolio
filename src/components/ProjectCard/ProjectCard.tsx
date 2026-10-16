@@ -1,12 +1,13 @@
 import { Link } from "@tanstack/react-router";
-import { assetUrl } from "../data/assets";
-import type { Project } from "../data/types";
+import { assetUrl } from "../../data/assets";
+import type { Project } from "../../data/types";
+import styles from "./ProjectCard.module.css";
 
 export function ProjectPreview({ project }: { project: Project }) {
   return (
-    <div className="project-preview">
-      <img className="project-bg" src={assetUrl(project.cover)} alt="" />
-      <div className="screen-mock" aria-hidden="true">
+    <div className={styles.preview}>
+      <img className={styles.background} src={assetUrl(project.cover)} alt="" />
+      <div className={styles.mock} aria-hidden="true">
         {project.screens.map((screen) => (
           <img key={screen} src={assetUrl(screen)} alt="" />
         ))}
@@ -20,10 +21,11 @@ export function ProjectCard({ project }: { project: Project }) {
     <Link
       to="/case-studies/$slug"
       params={{ slug: project.slug }}
-      className={project.span === "full" ? "project-card is-wide" : "project-card"}
+      className={project.span === "full" ? `${styles.card} ${styles.wide}` : styles.card}
+      data-reveal
     >
       <ProjectPreview project={project} />
-      <span className="project-caption">
+      <span className={styles.caption}>
         <strong>{project.title}</strong>
         <span>{project.year}</span>
       </span>

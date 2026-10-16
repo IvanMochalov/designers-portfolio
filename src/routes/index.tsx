@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { IdentityBlock } from "../components/IdentityBlock";
-import { ProjectCard } from "../components/ProjectCard";
+import { IdentityBlock } from "../components/IdentityBlock/IdentityBlock";
+import { ProjectCard } from "../components/ProjectCard/ProjectCard";
 import { projectsNewestFirst } from "../data/content";
-import { useSite } from "../components/LocaleProvider";
+import { useSite } from "../components/LocaleProvider/LocaleProvider";
 
 function HomePage() {
   const projects = projectsNewestFirst(useSite().content.projects);

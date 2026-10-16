@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { IdentityBlock } from "../components/IdentityBlock";
+import { IdentityBlock } from "../components/IdentityBlock/IdentityBlock";
 import { assetUrl } from "../data/assets";
-import { useSite } from "../components/LocaleProvider";
+import { useSite } from "../components/LocaleProvider/LocaleProvider";
 
 function ResumePage() {
   const { resume } = useSite().content;
@@ -40,7 +40,7 @@ function ResumePage() {
           {resume.tools.map((tool) => (
             <li key={tool.icon ?? tool.name}>
               {tool.icon ? (
-                <span className={tool.iconCrop ? "tool-icon is-crop" : "tool-icon"}>
+                <span className="tool-icon">
                   <img src={assetUrl(tool.icon)} alt="" />
                 </span>
               ) : null}

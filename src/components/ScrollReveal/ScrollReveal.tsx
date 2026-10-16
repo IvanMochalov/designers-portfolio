@@ -1,8 +1,8 @@
 import { useLayoutEffect } from "react";
 import { useRouterState } from "@tanstack/react-router";
+import "./ScrollReveal.module.css";
 
-const REVEAL =
-  ".topbar, main > :not(.project-grid):not(.case-column), .project-card, .case-column > *, .site-footer";
+const REVEAL = "[data-reveal], main > :not(.project-grid):not(.case-column), .case-column > *";
 
 function inView(node: HTMLElement) {
   const rect = node.getBoundingClientRect();

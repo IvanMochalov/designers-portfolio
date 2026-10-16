@@ -1,0 +1,7 @@
+.pill {
+  composes: pillButton from "../chrome.module.css";
+}
+
+.label {
+  composes: label from "../chrome.module.css";
+}

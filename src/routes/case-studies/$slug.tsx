@@ -2,7 +2,7 @@ import { useRef, useState, type TransitionEvent } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { assetUrl } from "../../data/assets";
 import { projectBySlug, visibleSections } from "../../data/content";
-import { useSite } from "../../components/LocaleProvider";
+import { useSite } from "../../components/LocaleProvider/LocaleProvider";
 import type { CaseFigure, CaseSlide, Project } from "../../data/types";
 
 type SlideView = { src: string; fit: "cover" | "contain"; align: "left" | "center" };
@@ -29,7 +29,8 @@ function slideClass(slide: SlideView) {
 function CaseMockup({ figure }: { figure: CaseFigure }) {
   const slides = slideViews(figure);
   const [index, setIndex] = useState(0);
-  const multiple = slides.length > 1;
+  const canPrev = index > 0;
+  const canNext = index < slides.length - 1;
 
   function step(direction: number) {
     setIndex((value) => Math.min(slides.length - 1, Math.max(0, value + direction)));
@@ -46,29 +47,17 @@ function CaseMockup({ figure }: { figure: CaseFigure }) {
           ))}
         </div>
       </div>
-      {multiple ? (
-        <>
-          <button
-            type="button"
-            className="carousel-btn prev"
-            aria-label="Previous screen"
-            disabled={index === 0}
-            onClick={() => step(-1)}
-          >
-            <img src={assetUrl("assets/carousel-arrow.svg")} alt="" />
-            <img className="is-hover" src={assetUrl("assets/carousel-arrow-hover.svg")} alt="" />
-          </button>
-          <button
-            type="button"
-            className="carousel-btn next"
-            aria-label="Next screen"
-            disabled={index >= slides.length - 1}
-            onClick={() => step(1)}
-          >
-            <img src={assetUrl("assets/carousel-arrow.svg")} alt="" />
-            <img className="is-hover" src={assetUrl("assets/carousel-arrow-hover.svg")} alt="" />
-          </button>
-        </>
+      {canPrev ? (
+        <button type="button" className="carousel-btn prev" aria-label="Previous screen" onClick={() => step(-1)}>
+          <img src={assetUrl("assets/carousel-arrow.svg")} alt="" />
+          <img className="is-hover" src={assetUrl("assets/carousel-arrow-hover.svg")} alt="" />
+        </button>
+      ) : null}
+      {canNext ? (
+        <button type="button" className="carousel-btn next" aria-label="Next screen" onClick={() => step(1)}>
+          <img src={assetUrl("assets/carousel-arrow.svg")} alt="" />
+          <img className="is-hover" src={assetUrl("assets/carousel-arrow-hover.svg")} alt="" />
+        </button>
       ) : null}
     </div>
   );

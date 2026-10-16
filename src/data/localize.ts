@@ -29,7 +29,6 @@ const structuralKeys = new Set([
   "phone",
   "poster",
   "screens",
-  "iconCrop",
   "hidden",
   "type",
   "defaultLocale",

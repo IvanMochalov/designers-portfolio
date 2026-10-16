@@ -1,7 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
-import { LocaleProvider } from "./components/LocaleProvider";
+import { FluidSurface } from "./components/FluidSurface/FluidSurface";
+import stage from "./components/FluidSurface/FluidSurface.module.css";
+import { LocaleProvider } from "./components/LocaleProvider/LocaleProvider";
 import { routeTree } from "./routeTree.gen";
 import "./styles.css";
 
@@ -24,7 +26,10 @@ if (!root) throw new Error("Root element is missing");
 createRoot(root).render(
   <StrictMode>
     <LocaleProvider>
-      <RouterProvider router={router} />
+      <FluidSurface />
+      <div className={stage.stage}>
+        <RouterProvider router={router} />
+      </div>
     </LocaleProvider>
   </StrictMode>,
 );

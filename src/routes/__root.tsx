@@ -1,10 +1,9 @@
 import { createRootRoute, Link, Outlet, useRouterState } from "@tanstack/react-router";
-import { CaseHeader } from "../components/CaseHeader";
-import { LightboxProvider } from "../components/Lightbox";
-import { SiteFooter } from "../components/SiteFooter";
-import { ScrollReveal } from "../components/ScrollReveal";
-import { SiteHeader } from "../components/SiteHeader";
-import { useSite } from "../components/LocaleProvider";
+import { CaseHeader } from "../components/CaseHeader/CaseHeader";
+import { SiteFooter } from "../components/SiteFooter/SiteFooter";
+import { ScrollReveal } from "../components/ScrollReveal/ScrollReveal";
+import { SiteHeader } from "../components/SiteHeader/SiteHeader";
+import { useSite } from "../components/LocaleProvider/LocaleProvider";
 
 function RootLayout() {
   const isCase = useRouterState({
@@ -12,14 +11,12 @@ function RootLayout() {
   });
 
   return (
-    <LightboxProvider>
       <div className="page">
         <ScrollReveal />
         {isCase ? <CaseHeader /> : <SiteHeader />}
         <Outlet />
         <SiteFooter />
       </div>
-    </LightboxProvider>
   );
 }
 
