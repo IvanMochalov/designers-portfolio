@@ -1,5 +1,6 @@
 import { createRootRoute, Link, Outlet, useRouterState } from "@tanstack/react-router";
 import { CaseHeader } from "../components/CaseHeader/CaseHeader";
+import { IdentityBlock } from "../components/IdentityBlock/IdentityBlock";
 import { SiteFooter } from "../components/SiteFooter/SiteFooter";
 import { ScrollReveal } from "../components/ScrollReveal/ScrollReveal";
 import { SiteHeader } from "../components/SiteHeader/SiteHeader";
@@ -14,6 +15,7 @@ function RootLayout() {
       <div className="page">
         <ScrollReveal />
         {isCase ? <CaseHeader /> : <SiteHeader />}
+        {isCase ? null : <IdentityBlock />}
         <Outlet />
         <SiteFooter />
       </div>

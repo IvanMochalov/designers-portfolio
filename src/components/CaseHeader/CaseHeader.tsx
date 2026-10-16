@@ -70,14 +70,20 @@ export function CaseHeader() {
 
   useEffect(() => {
     const ids = sectionKey.split(":").at(1)?.split("|").filter(Boolean) ?? [];
-    const nodes = ids
-      .map((id) => document.getElementById(id))
-      .filter((node): node is HTMLElement => node !== null);
-    if (nodes.length === 0) return;
+    let observer: IntersectionObserver | null = null;
+    let frame = 0;
+
+    const collect = () =>
+      ids
+        .map((id) => document.getElementById(id))
+        .filter((node): node is HTMLElement => node !== null);
 
     const update = () => {
       if (scrollLock.current !== 0) return;
-      const atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+      const nodes = collect();
+      if (nodes.length === 0) return;
+      const scrolling = document.scrollingElement ?? document.documentElement;
+      const atBottom = scrolling.scrollTop + window.innerHeight >= scrolling.scrollHeight - 2;
       if (atBottom) {
         setActive(nodes[nodes.length - 1].id);
         return;
@@ -92,7 +98,21 @@ export function CaseHeader() {
     };
     syncActive.current = update;
 
-    let frame = 0;
+    const watch = () => {
+      observer?.disconnect();
+      const nodes = collect();
+      if (nodes.length === 0) return;
+      const header = document.querySelector("[data-case-topbar]");
+      const top = Math.ceil((header?.getBoundingClientRect().bottom ?? 80) + 24);
+      const bottomInset = Math.max(0, window.innerHeight - top - 1);
+      observer = new IntersectionObserver(() => update(), {
+        rootMargin: `-${top}px 0px -${bottomInset}px 0px`,
+        threshold: [0, 1],
+      });
+      for (const node of nodes) observer.observe(node);
+      update();
+    };
+
     const onScroll = () => {
       if (frame !== 0) return;
       frame = window.requestAnimationFrame(() => {
@@ -100,13 +120,23 @@ export function CaseHeader() {
         update();
       });
     };
-    update();
+
+    watch();
     window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", watch);
+    const page = document.querySelector(".page");
+    const mutations = new MutationObserver(watch);
+    if (page) mutations.observe(page, { childList: true, subtree: true });
+
     return () => {
+      scrollLock.current = 0;
       syncActive.current = () => {};
       cancelScroll.current?.();
       cancelScroll.current = null;
+      observer?.disconnect();
+      mutations.disconnect();
       window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", watch);
       if (frame !== 0) window.cancelAnimationFrame(frame);
     };
   }, [sectionKey]);

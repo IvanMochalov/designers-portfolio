@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { IdentityBlock } from "../components/IdentityBlock/IdentityBlock";
 import { assetUrl } from "../data/assets";
 import { useSite } from "../components/LocaleProvider/LocaleProvider";
 
@@ -10,7 +9,6 @@ function AboutPage() {
 
   return (
     <main>
-      <IdentityBlock />
       <section className="about-intro">
         <img src={assetUrl(about.portrait)} alt={about.portraitAlt} />
         <div className="prose">

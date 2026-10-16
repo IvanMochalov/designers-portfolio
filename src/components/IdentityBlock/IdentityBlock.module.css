@@ -2,6 +2,17 @@
   padding: 20px 0 0;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .root {
+    animation: fade-in 1.15s ease both;
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 :global(.page:has(.about-intro)) .root,
 :global(.page:has(.jobs)) .root {
   padding-bottom: 60px;

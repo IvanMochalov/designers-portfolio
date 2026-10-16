@@ -9,7 +9,7 @@ export function SiteHeader() {
 
   return (
     <>
-      <div className={styles.topbar} data-reveal>
+      <div className={styles.topbar}>
         <div className={styles.avatar}>
           <img src={assetUrl(profile.avatar)} alt="" />
         </div>

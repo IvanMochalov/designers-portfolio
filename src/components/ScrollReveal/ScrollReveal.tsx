@@ -2,11 +2,17 @@ import { useLayoutEffect } from "react";
 import { useRouterState } from "@tanstack/react-router";
 import "./ScrollReveal.module.css";
 
-const REVEAL = "[data-reveal], main > :not(.project-grid):not(.case-column), .case-column > *";
+const REVEAL = [
+  ".project-grid > *",
+  ".masonry > *",
+  "main > :not(.project-grid):not(.masonry):not(.case-column)",
+  ".case-column > *",
+  "[data-reveal]",
+].join(", ");
 
-function inView(node: HTMLElement) {
+function hasEntered(node: HTMLElement) {
   const rect = node.getBoundingClientRect();
-  return rect.width > 0 && rect.height > 0 && rect.bottom > 0 && rect.top < window.innerHeight * 0.92;
+  return rect.width > 0 && rect.height > 0 && rect.top < window.innerHeight * 0.92;
 }
 
 export function ScrollReveal() {
@@ -17,6 +23,11 @@ export function ScrollReveal() {
     if (!root) return;
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const nodes = () => [...root.querySelectorAll<HTMLElement>(REVEAL)];
+
+    for (const node of nodes()) delete node.dataset.in;
+    void root.getBoundingClientRect();
+
     let batch = 0;
 
     const show = (node: HTMLElement) => {
@@ -40,9 +51,9 @@ export function ScrollReveal() {
 
     const scan = () => {
       batch = 0;
-      for (const node of root.querySelectorAll<HTMLElement>(REVEAL)) {
+      for (const node of nodes()) {
         if (node.dataset.in === "1") continue;
-        if (reduce || inView(node)) {
+        if (reduce || hasEntered(node)) {
           show(node);
           continue;
         }
@@ -50,13 +61,25 @@ export function ScrollReveal() {
       }
     };
 
+    let frame = 0;
+    const onScroll = () => {
+      if (frame !== 0) return;
+      frame = window.requestAnimationFrame(() => {
+        frame = 0;
+        scan();
+      });
+    };
+
     scan();
-    const frame = window.requestAnimationFrame(scan);
+    const first = window.requestAnimationFrame(scan);
+    window.addEventListener("scroll", onScroll, { passive: true });
     const mutations = new MutationObserver(scan);
     mutations.observe(root, { childList: true, subtree: true });
 
     return () => {
       window.cancelAnimationFrame(frame);
+      window.cancelAnimationFrame(first);
+      window.removeEventListener("scroll", onScroll);
       mutations.disconnect();
       observer.disconnect();
     };

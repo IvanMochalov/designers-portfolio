@@ -22,7 +22,6 @@ export function ProjectCard({ project }: { project: Project }) {
       to="/case-studies/$slug"
       params={{ slug: project.slug }}
       className={project.span === "full" ? `${styles.card} ${styles.wide}` : styles.card}
-      data-reveal
     >
       <ProjectPreview project={project} />
       <span className={styles.caption}>

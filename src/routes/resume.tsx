@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { IdentityBlock } from "../components/IdentityBlock/IdentityBlock";
 import { assetUrl } from "../data/assets";
 import { useSite } from "../components/LocaleProvider/LocaleProvider";
 
@@ -8,7 +7,6 @@ function ResumePage() {
 
   return (
     <main>
-      <IdentityBlock />
       <section className="jobs">
         {resume.jobs.map((job, index) => (
           <article key={index}>
