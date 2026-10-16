@@ -26,7 +26,12 @@ describe("site content", () => {
   it("uses the designer profile and the three main pages", () => {
     expect(content.profile.name).toBe("Artyom Kashkarov");
     expect(content.profile.email).toBe("kashkarov.artyom@gmail.com");
-    expect(content.ui.nav.map((item) => item.label)).toEqual(["Projects", "About", "Resume"]);
+    expect(content.ui.nav.map((item) => item.label)).toEqual([
+      "Projects",
+      "Experiments",
+      "About",
+      "Resume",
+    ]);
     expect(content.ui.switchTo).toBe("Switch language to Russian");
   });
 
@@ -65,7 +70,8 @@ describe("site content", () => {
     const analysis = content.projects[0]?.sections.find((section) => section.id === "analysis");
     expect(analysis?.insights[0]?.figure?.slides).toHaveLength(2);
     const booking = content.projects[0]?.sections.find((section) => section.id === "solutions");
-    expect(booking?.insights.at(-1)?.figure?.slides).toHaveLength(6);
+    expect(booking?.insights.at(-2)?.figure?.slides).toHaveLength(6);
+    expect(booking?.insights.at(-1)?.figure?.slides).toHaveLength(3);
     const tenderSolutions = content.projects[1]?.sections.find((section) => section.id === "solutions");
     expect(tenderSolutions?.insights.map((insight) => insight.figure?.slides?.length)).toEqual([3, 3, 6]);
     expect(content.projects[1]?.brief.items?.[0]?.text).toContain("B2B platform");
@@ -97,7 +103,12 @@ describe("site content", () => {
 
   it("keeps a Russian layout for every piece of copy", () => {
     const russian = localizedContent(raw, "ru");
-    expect(russian.ui.nav.map((item) => item.label)).toEqual(["Проекты", "Обо мне", "Резюме"]);
+    expect(russian.ui.nav.map((item) => item.label)).toEqual([
+      "Проекты",
+      "Эксперименты",
+      "Обо мне",
+      "Резюме",
+    ]);
     expect(russian.profile.name).toBe("Артём Кашкаров");
     expect(russian.profile.email).toBe(content.profile.email);
     expect(russian.projects[1]?.brief.items?.[0]?.text).not.toBe(content.projects[1]?.brief.items?.[0]?.text);

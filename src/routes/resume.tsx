@@ -40,7 +40,7 @@ function ResumePage() {
           {resume.tools.map((tool) => (
             <li key={tool.icon ?? tool.name}>
               {tool.icon ? (
-                <span className={tool.iconCrop ? "tool-icon is-crop" : "tool-icon"}>
+                <span className="tool-icon">
                   <img src={assetUrl(tool.icon)} alt="" />
                 </span>
               ) : null}

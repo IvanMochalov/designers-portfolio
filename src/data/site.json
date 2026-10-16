@@ -27,7 +27,7 @@
           "ru": "LinkedIn"
         },
         "icon": "assets/linkedin.svg",
-        "href": ""
+        "href": "https://www.linkedin.com/in/ap4em/"
       },
       {
         "label": {
@@ -35,7 +35,15 @@
           "ru": "Telegram"
         },
         "icon": "assets/telegram.svg",
-        "href": ""
+        "href": "https://t.me/ap4em"
+      },
+      {
+        "label": {
+          "en": "Instagram",
+          "ru": "Instagram"
+        },
+        "icon": "assets/instagram.svg",
+        "href": "https://www.instagram.com/ap4em"
       }
     ]
   },
@@ -47,6 +55,13 @@
           "ru": "Проекты"
         },
         "to": "/"
+      },
+      {
+        "label": {
+          "en": "Experiments",
+          "ru": "Эксперименты"
+        },
+        "to": "/experiments"
       },
       {
         "label": {
@@ -65,11 +80,15 @@
     ],
     "latestWork": {
       "en": "My latest work",
-      "ru": "Моя последняя работа"
+      "ru": "Последняя работа"
     },
     "letsChat": {
       "en": "Let’s chat",
-      "ru": "Давайте пообщаемся"
+      "ru": "Связаться"
+    },
+    "pdfResume": {
+      "en": "PDF Resume",
+      "ru": "PDF-резюме"
     },
     "copied": {
       "en": "Copied!",
@@ -317,7 +336,7 @@
         },
         "caption": {
           "en": "Drawing",
-          "ru": "Рисунок"
+          "ru": "Чертежи"
         }
       },
       {
@@ -477,7 +496,7 @@
         },
         "detail": {
           "en": "Scrolling Reels",
-          "ru": "Лента Reels"
+          "ru": "Скролю рилсики"
         },
         "icon": "assets/tool-instagram.svg"
       },
@@ -490,8 +509,7 @@
           "en": "Brainstorming, workshops",
           "ru": "Брейнштормы и воркшопы"
         },
-        "icon": "assets/tool-xmind.png",
-        "iconCrop": true
+        "icon": "assets/tool-xmind.png"
       },
       {
         "name": {
@@ -585,7 +603,7 @@
       {
         "title": {
           "en": "Moscow State University of Civil Engineering",
-          "ru": "НИУ МГСУ"
+          "ru": "Национальный исследовательсткий Московский государственный строительный университет НИУ МГСУ"
         },
         "dates": {
           "en": "2018 – 2022",
@@ -988,6 +1006,30 @@
                   "assets/crm-booking-4.png",
                   "assets/crm-booking-5.png",
                   "assets/crm-booking-6.png"
+                ]
+              }
+            },
+            {
+              "heading": {
+                "en": "Centralized Client Information",
+                "ru": "Вся информация о клиенте в одном месте"
+              },
+              "paragraphs": [
+                {
+                  "en": "Designed a unified client profile that brings contact details, booking history, payments, and preferences into one place. Administrators can quickly access relevant information, track past interactions, and manage bookings without switching between multiple screens.",
+                  "ru": "Собрал единый профиль клиента: контакты, история броней, оплаты и предпочтения в одном месте. Администратор быстро находит нужное, видит прошлые обращения и управляет бронями, не переключаясь между экранами."
+                }
+              ],
+              "figure": {
+                "src": "assets/crm-client-1.png",
+                "alt": {
+                  "en": "Client profile",
+                  "ru": "Профиль клиента"
+                },
+                "slides": [
+                  "assets/crm-client-1.png",
+                  "assets/crm-client-2.png",
+                  "assets/crm-client-3.png"
                 ]
               }
             }

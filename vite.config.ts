@@ -14,4 +14,9 @@ export default defineConfig({
   test: {
     environment: "node",
   },
+  server: {
+    host: "0.0.0.0",
+    port: 5173,
+    strictPort: true,
+  },
 });

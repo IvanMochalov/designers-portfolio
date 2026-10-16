@@ -285,13 +285,6 @@ button, a { font: inherit; color: inherit; }
 
 .tool-icon img { width: 30px; height: 30px; object-fit: contain; }
 
-.tool-icon.is-crop img {
-  width: 117px;
-  height: 30px;
-  object-fit: cover;
-  object-position: left center;
-}
-
 .tools li > span:last-child { display: grid; color: #717880; font-size: 14px; line-height: 1.45; }
 .tools strong { color: #04111f; font-size: 14px; font-weight: 500; line-height: 22px; }
 
@@ -528,7 +521,12 @@ button, a { font: inherit; color: inherit; }
 }
 
 @media (max-width: 960px) {
-  .page { --section-pad: 60px; }
+  .page {
+    --section-pad: 60px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+  }
   .about-intro { grid-template-columns: 196px 1fr; gap: 40px; align-items: start; }
   .about-intro img { width: 196px; height: 287px; }
   .values, .path-grid, .points { grid-template-columns: 1fr 1fr; }

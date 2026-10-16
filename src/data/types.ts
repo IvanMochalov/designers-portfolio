@@ -136,6 +136,7 @@ export type SiteContent = {
     switchTo: string;
     latestWork: string;
     letsChat: string;
+    pdfResume: string;
     copied: string;
     schedule: string;
     linksTitle: string;
@@ -175,7 +176,7 @@ export type SiteContent = {
     }[];
     toolsTitle: string;
     toolsMuted: string;
-    tools: { name: string; detail: string; icon?: string; iconCrop?: boolean }[];
+    tools: { name: string; detail: string; icon?: string }[];
     skillsTitle: string;
     skills: string[];
     educationTitle: string;

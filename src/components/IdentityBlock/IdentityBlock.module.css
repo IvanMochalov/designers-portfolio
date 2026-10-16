@@ -26,8 +26,16 @@
 
 .actions {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 12px;
   margin-top: 20px;
+}
+
+.group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 @media (max-width: 720px) {

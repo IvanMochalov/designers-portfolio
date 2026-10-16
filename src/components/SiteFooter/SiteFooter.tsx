@@ -7,7 +7,6 @@ import styles from "./SiteFooter.module.css";
 export function SiteFooter() {
   const [copied, setCopied] = useState(false);
   const { profile, ui } = useSite().content;
-  const scheduleHref = profile.scheduleUrl || `mailto:${profile.email}`;
 
   async function copyEmail() {
     try {
@@ -43,11 +42,10 @@ export function SiteFooter() {
           <button type="button" className={styles.copy} onClick={() => void copyEmail()}>
             {copied ? ui.copied : profile.email}
           </button>
-          <a href={scheduleHref}>{ui.schedule}</a>
           <div className={styles.socials}>
             {profile.social.map((item) =>
               item.href ? (
-                <a key={item.icon} href={item.href}>
+                <a key={item.icon} href={item.href} target="_blank" rel="noopener noreferrer">
                   <img src={assetUrl(item.icon)} alt={item.label} />
                 </a>
               ) : (

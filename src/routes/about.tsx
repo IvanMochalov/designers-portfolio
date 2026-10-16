@@ -5,7 +5,8 @@ import { useSite } from "../components/LocaleProvider/LocaleProvider";
 
 function AboutPage() {
   const { about, profile, ui } = useSite().content;
-  const chatHref = profile.scheduleUrl || `mailto:${profile.email}`;
+  const chatHref =
+    profile.social.find((item) => item.href.includes("t.me/"))?.href ?? `mailto:${profile.email}`;
 
   return (
     <main>
@@ -20,7 +21,7 @@ function AboutPage() {
           {about.paragraphs.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
-          <a className="button button-secondary" href={chatHref}>
+          <a className="button button-secondary" href={chatHref} target="_blank" rel="noopener noreferrer">
             {ui.letsChat}
             <span className="button-icon" aria-hidden="true">
               <img src={assetUrl("assets/send.svg")} alt="" />
