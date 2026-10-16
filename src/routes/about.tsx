@@ -22,7 +22,7 @@ function AboutPage() {
           <a className="button button-secondary" href={chatHref} target="_blank" rel="noopener noreferrer">
             {ui.letsChat}
             <span className="button-icon" aria-hidden="true">
-              <img src={assetUrl("assets/send.svg")} alt="" />
+              <img src={assetUrl("assets/ui/send.svg")} alt="" />
             </span>
           </a>
         </div>

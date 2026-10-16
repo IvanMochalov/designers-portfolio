@@ -49,14 +49,14 @@ function CaseMockup({ figure }: { figure: CaseFigure }) {
       </div>
       {canPrev ? (
         <button type="button" className="carousel-btn prev" aria-label="Previous screen" onClick={() => step(-1)}>
-          <img src={assetUrl("assets/carousel-arrow.svg")} alt="" />
-          <img className="is-hover" src={assetUrl("assets/carousel-arrow-hover.svg")} alt="" />
+          <img src={assetUrl("assets/ui/carousel-arrow.svg")} alt="" />
+          <img className="is-hover" src={assetUrl("assets/ui/carousel-arrow-hover.svg")} alt="" />
         </button>
       ) : null}
       {canNext ? (
         <button type="button" className="carousel-btn next" aria-label="Next screen" onClick={() => step(1)}>
-          <img src={assetUrl("assets/carousel-arrow.svg")} alt="" />
-          <img className="is-hover" src={assetUrl("assets/carousel-arrow-hover.svg")} alt="" />
+          <img src={assetUrl("assets/ui/carousel-arrow.svg")} alt="" />
+          <img className="is-hover" src={assetUrl("assets/ui/carousel-arrow-hover.svg")} alt="" />
         </button>
       ) : null}
     </div>
@@ -106,7 +106,7 @@ function BriefCard({ brief }: { brief: Project["brief"] }) {
     <section className={expanded ? "brief-card is-open" : "brief-card"}>
       <button type="button" className="brief-toggle" aria-expanded={expanded} onClick={toggle}>
         <h2>{brief.title}</h2>
-        <img className="brief-chevron" src={assetUrl("assets/chevron-down.svg")} alt="" />
+        <img className="brief-chevron" src={assetUrl("assets/ui/chevron-down.svg")} alt="" />
       </button>
       <div className="brief-fold">
         <div className="brief-teaser" ref={teaserRef} style={{ height: heights.teaser }} onTransitionEnd={releaseHeight}>

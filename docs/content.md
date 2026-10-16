@@ -2,7 +2,12 @@
 
 Весь текст, картинки и состав страниц лежат в `src/data/site.json`. Вёрстка читает этот файл и рисует страницы. Чтобы поменять заголовок, абзац или слайд, правьте JSON и сохраните файл. При запущенном `npm run dev` страница обновится сама.
 
-Картинки лежат в `src/assets`. В JSON путь пишется как `assets/имя-файла.png`, без `src/`.
+Картинки лежат в `src/assets`, по папкам. В JSON путь пишется без `src/`:
+
+- проект — `assets/projects/<slug>/файл.png`, где `<slug>` совпадает с адресом кейса;
+- страница — `assets/about/`, `assets/resume/`, `assets/experiments/`;
+- имя, слово и иконки соцсетей — `assets/profile/`;
+- стрелки и иконки кнопок — `assets/ui/`.
 
 Общее устройство сайта описано в [README](../README.md).
 
@@ -93,7 +98,7 @@
 
 ```json
 "figure": {
-  "src": "assets/crm-dashboard.png",
+  "src": "assets/projects/crm-platform-for-managing-room-bookings/crm-dashboard.png",
   "alt": { "en": "CRM dashboard", "ru": "Дашборд CRM" }
 }
 ```
@@ -104,11 +109,11 @@
 
 ```json
 "figure": {
-  "src": "assets/crm-booking-flow.png",
+  "src": "assets/projects/crm-platform-for-managing-room-bookings/crm-booking-flow.png",
   "alt": { "en": "Booking flow analysis", "ru": "Анализ процесса бронирования" },
   "slides": [
-    { "src": "assets/crm-booking-flow.png", "fit": "cover", "align": "left" },
-    { "src": "assets/crm-structure.png", "fit": "contain" }
+    { "src": "assets/projects/crm-platform-for-managing-room-bookings/crm-booking-flow.png", "fit": "cover", "align": "left" },
+    { "src": "assets/projects/crm-platform-for-managing-room-bookings/crm-structure.png", "fit": "contain" }
   ]
 }
 ```

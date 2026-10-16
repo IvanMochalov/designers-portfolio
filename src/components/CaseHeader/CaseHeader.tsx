@@ -161,7 +161,7 @@ export function CaseHeader() {
   return (
     <header className={styles.topbar} data-case-topbar>
       <Link to="/" className={styles.back} aria-label={projectsLabel}>
-        <img src={assetUrl("assets/arrow-left.svg")} alt="" />
+        <img src={assetUrl("assets/ui/arrow-left.svg")} alt="" />
         <span className={styles.label}>{projectsLabel}</span>
       </Link>
       <nav className={styles.anchors} aria-label="Sections">

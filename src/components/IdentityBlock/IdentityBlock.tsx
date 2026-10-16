@@ -26,13 +26,13 @@ export function IdentityBlock() {
           <button type="button" className="button button-primary" onClick={onLatestWork}>
             {ui.latestWork}
             <span className="button-icon" aria-hidden="true">
-              <img src={assetUrl("assets/star.svg")} alt="" />
+              <img src={assetUrl("assets/ui/star.svg")} alt="" />
             </span>
           </button>
           <a className="button button-secondary" href={chatHref} target="_blank" rel="noopener noreferrer">
             {ui.letsChat}
             <span className="button-icon" aria-hidden="true">
-              <img src={assetUrl("assets/send.svg")} alt="" />
+              <img src={assetUrl("assets/ui/send.svg")} alt="" />
             </span>
           </a>
         </div>
@@ -40,7 +40,7 @@ export function IdentityBlock() {
           <a className={`button button-secondary ${styles.pdf}`} href={`${import.meta.env.BASE_URL}resume.pdf`} download>
             {ui.pdfResume}
             <span className="button-icon" aria-hidden="true">
-              <img src={assetUrl("assets/download.svg")} alt="" />
+              <img src={assetUrl("assets/ui/download.svg")} alt="" />
             </span>
           </a>
         ) : null}

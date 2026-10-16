@@ -8,14 +8,14 @@
       "en": "Product Designer turning complex workflows, data, and business logic into clear, intuitive interfaces.",
       "ru": "Продуктовый дизайнер: превращаю сложные процессы, данные и бизнес-логику в понятные интерфейсы."
     },
-    "avatar": "assets/portrait.png",
+    "avatar": "assets/profile/portrait.png",
     "email": "kashkarov.artyom@gmail.com",
     "scheduleUrl": "",
     "tagline": {
       "en": "Always curious about how things work —\nand how to make them work better.",
       "ru": "Всегда интересно, как устроены вещи —\nи как сделать так, чтобы они работали лучше."
     },
-    "wordmark": "assets/wordmark.svg",
+    "wordmark": "assets/profile/wordmark.svg",
     "copyright": {
       "en": "© 2026 Artyom · Product Designer",
       "ru": "© 2026 Артём · Продуктовый дизайнер"
@@ -26,7 +26,7 @@
           "en": "LinkedIn",
           "ru": "LinkedIn"
         },
-        "icon": "assets/linkedin.svg",
+        "icon": "assets/profile/linkedin.svg",
         "href": "https://www.linkedin.com/in/ap4em/"
       },
       {
@@ -34,7 +34,7 @@
           "en": "Telegram",
           "ru": "Telegram"
         },
-        "icon": "assets/telegram.svg",
+        "icon": "assets/profile/telegram.svg",
         "href": "https://t.me/ap4em"
       },
       {
@@ -42,7 +42,7 @@
           "en": "Instagram",
           "ru": "Instagram"
         },
-        "icon": "assets/instagram.svg",
+        "icon": "assets/profile/instagram.svg",
         "href": "https://www.instagram.com/ap4em"
       }
     ]
@@ -149,9 +149,30 @@
       "ru": "Переключить язык на английский"
     }
   },
-  "experiments": [],
+  "experiments": [
+    {
+      "title": "VPN Mobile App",
+      "alt": "VPN Mobile App",
+      "src": "assets/experiments/2-iPhone-14-Pro-Mockup.jpg"
+    },
+    {
+      "title": "Bringing Local News Together",
+      "alt": "Bringing Local News Together",
+      "src": "assets/experiments/30.jpg"
+    },
+    {
+      "title": "Social Media App",
+      "alt": "Social Media App",
+      "src": "assets/experiments/Preview.jpg"
+    },
+    {
+      "title": "Mobile view dashboard",
+      "alt": "Mobile view dashboard",
+      "src": "assets/experiments/iPhone14Pro-Mockup-05a.jpg"
+    }
+  ],
   "about": {
-    "portrait": "assets/about-portrait-tone.png",
+    "portrait": "assets/about/about-portrait-tone.png",
     "portraitAlt": {
       "en": "Artyom Kashkarov",
       "ru": "Артём Кашкаров"
@@ -196,77 +217,77 @@
           "en": "AI tools",
           "ru": "Инструменты ИИ"
         },
-        "icon": "assets/interest-ai.png"
+        "icon": "assets/about/interest-ai.png"
       },
       {
         "label": {
           "en": "Minimal interfaces",
           "ru": "Минималистичные интерфейсы"
         },
-        "icon": "assets/interest-minimal.png"
+        "icon": "assets/about/interest-minimal.png"
       },
       {
         "label": {
           "en": "Football",
           "ru": "Футбол"
         },
-        "icon": "assets/interest-football.png"
+        "icon": "assets/about/interest-football.png"
       },
       {
         "label": {
           "en": "Tennis",
           "ru": "Теннис"
         },
-        "icon": "assets/interest-tennis.png"
+        "icon": "assets/about/interest-tennis.png"
       },
       {
         "label": {
           "en": "Techno music",
           "ru": "Техно"
         },
-        "icon": "assets/interest-techno.png"
+        "icon": "assets/about/interest-techno.png"
       },
       {
         "label": {
           "en": "Long walks",
           "ru": "Долгие прогулки"
         },
-        "icon": "assets/interest-walks.png"
+        "icon": "assets/about/interest-walks.png"
       },
       {
         "label": {
           "en": "Gym",
           "ru": "Зал"
         },
-        "icon": "assets/interest-gym.png"
+        "icon": "assets/about/interest-gym.png"
       },
       {
         "label": {
           "en": "Ramen",
           "ru": "Рамен"
         },
-        "icon": "assets/interest-ramen.png"
+        "icon": "assets/about/interest-ramen.png"
       },
       {
         "label": {
           "en": "Complex tasks",
           "ru": "Сложные задачи"
         },
-        "icon": "assets/interest-complex.png"
+        "icon": "assets/about/interest-complex.png"
       },
       {
         "label": {
           "en": "Design systems",
           "ru": "Дизайн-системы"
         },
-        "icon": "assets/interest-systems.png"
+        "icon": "assets/about/interest-systems.png"
       },
       {
         "label": {
           "en": "Future of technology",
           "ru": "Будущее технологий"
         },
-        "icon": "assets/interest-future.png"
+        "icon": "assets/about/interest-future.png"
       }
     ],
     "valuesTitle": {
@@ -329,7 +350,7 @@
     },
     "path": [
       {
-        "src": "assets/path-drawing.png",
+        "src": "assets/about/path-drawing.png",
         "alt": {
           "en": "Pencil drawing over a blueprint",
           "ru": "Карандашный рисунок поверх чертежа"
@@ -340,7 +361,7 @@
         }
       },
       {
-        "src": "assets/path-graphic.png",
+        "src": "assets/about/path-graphic.png",
         "alt": {
           "en": "Tablet with a graphic design sketch",
           "ru": "Планшет с эскизом графического дизайна"
@@ -351,7 +372,7 @@
         }
       },
       {
-        "src": "assets/path-ux.png",
+        "src": "assets/about/path-ux.png",
         "alt": {
           "en": "Design system file in an editor",
           "ru": "Файл дизайн-системы в редакторе"
@@ -362,7 +383,7 @@
         }
       },
       {
-        "src": "assets/path-systems.png",
+        "src": "assets/about/path-systems.png",
         "alt": {
           "en": "Screens of a digital product",
           "ru": "Экраны цифрового продукта"
@@ -393,7 +414,7 @@
           "en": "Remote",
           "ru": "Удалённо"
         },
-        "icon": "assets/logo-mgpi.svg",
+        "icon": "assets/resume/logo-mgpi.svg",
         "body": {
           "en": "Designed and built a design system from scratch for Moscow's Urban Development Complex, establishing a unified standard across its digital services.\n\nDesign complex digital products and workflows, transforming technical requirements into intuitive, scalable interfaces.",
           "ru": "Собрал дизайн-систему с нуля для Комплекса градостроительной политики Москвы и задал единый стандарт для её цифровых сервисов.\n\nПроектирую сложные цифровые продукты и процессы, превращая технические требования в понятные масштабируемые интерфейсы."
@@ -416,7 +437,7 @@
           "en": "Part time",
           "ru": "Частичная занятость"
         },
-        "icon": "assets/logo-webinfra.svg",
+        "icon": "assets/resume/logo-webinfra.svg",
         "body": {
           "en": "Designed user-centered interfaces for B2B and B2C digital products, focusing on usability, functionality, and visual consistency.\n\nTranslated complex requirements into intuitive user flows, interactive prototypes, and scalable UI solutions.",
           "ru": "Проектировал интерфейсы для B2B- и B2C-продуктов с упором на удобство, функциональность и визуальную цельность.\n\nПереводил сложные требования в понятные сценарии, интерактивные прототипы и масштабируемые интерфейсы."
@@ -439,7 +460,7 @@
           "en": "Moscow",
           "ru": "Москва"
         },
-        "icon": "assets/logo-urban.svg",
+        "icon": "assets/resume/logo-urban.svg",
         "body": {
           "en": "Designed presentations and visual materials for government and urban development projects, making complex information clear and accessible.\n\nCreated infographics, data visualizations, and structured layouts to communicate key ideas effectively.",
           "ru": "Делал презентации и визуальные материалы для государственных и градостроительных проектов, чтобы сложная информация была понятной и доступной.\n\nСоздавал инфографику, визуализации данных и структурированные макеты, которые ясно доносят главные идеи."
@@ -462,7 +483,7 @@
           "en": "San Jose, Remote",
           "ru": "Сан-Хосе, удалённо"
         },
-        "icon": "assets/logo-ssldragon.svg",
+        "icon": "assets/resume/logo-ssldragon.svg",
         "body": {
           "en": "Designed responsive websites and landing pages, combining usability with modern visual design.\n\nCreated custom illustrations and graphic assets to establish a consistent visual identity across digital experiences.",
           "ru": "Проектировал адаптивные сайты и лендинги, соединяя удобство с современным визуальным дизайном.\n\nРисовал иллюстрации и графику, чтобы собрать цельный визуальный образ цифровых продуктов."
@@ -487,7 +508,7 @@
           "en": "UI Design",
           "ru": "Дизайн интерфейсов"
         },
-        "icon": "assets/tool-figma.svg"
+        "icon": "assets/resume/tool-figma.svg"
       },
       {
         "name": {
@@ -498,7 +519,7 @@
           "en": "Scrolling Reels",
           "ru": "Скролю рилсики"
         },
-        "icon": "assets/tool-instagram.svg"
+        "icon": "assets/resume/tool-instagram.svg"
       },
       {
         "name": {
@@ -509,7 +530,7 @@
           "en": "Brainstorming, workshops",
           "ru": "Брейнштормы и воркшопы"
         },
-        "icon": "assets/tool-xmind.png"
+        "icon": "assets/resume/tool-xmind.png"
       },
       {
         "name": {
@@ -520,7 +541,7 @@
           "en": "Ideation, prototyping",
           "ru": "Идеи и прототипы"
         },
-        "icon": "assets/tool-claude.svg"
+        "icon": "assets/resume/tool-claude.svg"
       },
       {
         "name": {
@@ -531,7 +552,7 @@
           "en": "Search",
           "ru": "Поиск"
         },
-        "icon": "assets/tool-perplexity.svg"
+        "icon": "assets/resume/tool-perplexity.svg"
       },
       {
         "name": {
@@ -542,7 +563,7 @@
           "en": "Web design, templates",
           "ru": "Веб-дизайн и шаблоны"
         },
-        "icon": "assets/tool-framer.svg"
+        "icon": "assets/resume/tool-framer.svg"
       }
     ],
     "skillsTitle": {
@@ -639,16 +660,16 @@
       },
       "client": "",
       "year": "2024",
-      "cover": "assets/project-crm-bg.png",
+      "cover": "assets/projects/crm-platform-for-managing-room-bookings/project-crm-bg.png",
       "screens": [
-        "assets/project-crm-screen.png"
+        "assets/projects/crm-platform-for-managing-room-bookings/project-crm-screen.png"
       ],
       "summary": {
         "en": "CRM for space operators: managing rooms, occupancy calendar, and analytics, all integrated into one workflow instead of dozens of spreadsheets and chats.",
         "ru": "CRM для операторов пространств: комнаты, календарь загрузки и аналитика в одном процессе вместо десятков таблиц и переписок."
       },
       "hero": {
-        "screen": "assets/crm-hero.png"
+        "screen": "assets/projects/crm-platform-for-managing-room-bookings/crm-hero.png"
       },
       "brief": {
         "title": {
@@ -859,19 +880,19 @@
             {
               "heading": "",
               "figure": {
-                "src": "assets/crm-booking-flow.png",
+                "src": "assets/projects/crm-platform-for-managing-room-bookings/crm-booking-flow.png",
                 "alt": {
                   "en": "Booking flow analysis",
                   "ru": "Анализ процесса бронирования"
                 },
                 "slides": [
                   {
-                    "src": "assets/crm-booking-flow.png",
+                    "src": "assets/projects/crm-platform-for-managing-room-bookings/crm-booking-flow.png",
                     "fit": "cover",
                     "align": "left"
                   },
                   {
-                    "src": "assets/crm-structure.png",
+                    "src": "assets/projects/crm-platform-for-managing-room-bookings/crm-structure.png",
                     "fit": "contain"
                   }
                 ]
@@ -903,7 +924,7 @@
             {
               "heading": "",
               "figure": {
-                "src": "assets/crm-architecture.png",
+                "src": "assets/projects/crm-platform-for-managing-room-bookings/crm-architecture.png",
                 "alt": {
                   "en": "Booking architecture diagram",
                   "ru": "Схема архитектуры бронирования"
@@ -937,7 +958,7 @@
                 }
               ],
               "figure": {
-                "src": "assets/crm-dashboard.png",
+                "src": "assets/projects/crm-platform-for-managing-room-bookings/crm-dashboard.png",
                 "alt": {
                   "en": "CRM dashboard",
                   "ru": "Дашборд CRM"
@@ -956,7 +977,7 @@
                 }
               ],
               "figure": {
-                "src": "assets/project-crm-screen.png",
+                "src": "assets/projects/crm-platform-for-managing-room-bookings/project-crm-screen.png",
                 "alt": {
                   "en": "Room occupancy calendar",
                   "ru": "Календарь загрузки помещений"
@@ -975,7 +996,7 @@
                 }
               ],
               "figure": {
-                "src": "assets/crm-roles.png",
+                "src": "assets/projects/crm-platform-for-managing-room-bookings/crm-roles.png",
                 "alt": {
                   "en": "Role-based CRM views",
                   "ru": "Ролевые представления CRM"
@@ -994,18 +1015,18 @@
                 }
               ],
               "figure": {
-                "src": "assets/crm-booking-1.png",
+                "src": "assets/projects/crm-platform-for-managing-room-bookings/crm-booking-1.png",
                 "alt": {
                   "en": "Booking flow",
                   "ru": "Процесс бронирования"
                 },
                 "slides": [
-                  "assets/crm-booking-1.png",
-                  "assets/crm-booking-2.png",
-                  "assets/crm-booking-3.png",
-                  "assets/crm-booking-4.png",
-                  "assets/crm-booking-5.png",
-                  "assets/crm-booking-6.png"
+                  "assets/projects/crm-platform-for-managing-room-bookings/crm-booking-1.png",
+                  "assets/projects/crm-platform-for-managing-room-bookings/crm-booking-2.png",
+                  "assets/projects/crm-platform-for-managing-room-bookings/crm-booking-3.png",
+                  "assets/projects/crm-platform-for-managing-room-bookings/crm-booking-4.png",
+                  "assets/projects/crm-platform-for-managing-room-bookings/crm-booking-5.png",
+                  "assets/projects/crm-platform-for-managing-room-bookings/crm-booking-6.png"
                 ]
               }
             },
@@ -1021,15 +1042,15 @@
                 }
               ],
               "figure": {
-                "src": "assets/crm-client-1.png",
+                "src": "assets/projects/crm-platform-for-managing-room-bookings/crm-client-1.png",
                 "alt": {
                   "en": "Client profile",
                   "ru": "Профиль клиента"
                 },
                 "slides": [
-                  "assets/crm-client-1.png",
-                  "assets/crm-client-2.png",
-                  "assets/crm-client-3.png"
+                  "assets/projects/crm-platform-for-managing-room-bookings/crm-client-1.png",
+                  "assets/projects/crm-platform-for-managing-room-bookings/crm-client-2.png",
+                  "assets/projects/crm-platform-for-managing-room-bookings/crm-client-3.png"
                 ]
               }
             }
@@ -1067,19 +1088,19 @@
       },
       "client": "",
       "year": "2025",
-      "cover": "assets/project-tender-bg.png",
+      "cover": "assets/projects/construction-tender-management/project-tender-bg.png",
       "screens": [
-        "assets/project-tender-screen.png",
-        "assets/project-tender-overlay.png"
+        "assets/projects/construction-tender-management/project-tender-screen.png",
+        "assets/projects/construction-tender-management/project-tender-overlay.png"
       ],
       "summary": {
         "en": "A B2B platform designed to connect construction companies and contractors, bringing tender management, applications, and contractor selection into one unified workspace.",
         "ru": "B2B-платформа, которая связывает строительные компании и подрядчиков и собирает тендеры, заявки и выбор подрядчика в одном рабочем пространстве."
       },
       "hero": {
-        "screen": "assets/project-tender-screen.png",
-        "overlay": "assets/project-tender-overlay.png",
-        "phone": "assets/tender-phone.png"
+        "screen": "assets/projects/construction-tender-management/project-tender-screen.png",
+        "overlay": "assets/projects/construction-tender-management/project-tender-overlay.png",
+        "phone": "assets/projects/construction-tender-management/tender-phone.png"
       },
       "brief": {
         "title": {
@@ -1294,15 +1315,15 @@
                 }
               ],
               "figure": {
-                "src": "assets/tender-workflow-1.png",
+                "src": "assets/projects/construction-tender-management/tender-workflow-1.png",
                 "alt": {
                   "en": "Tender workflow screens",
                   "ru": "Экраны процесса тендера"
                 },
                 "slides": [
-                  "assets/tender-workflow-1.png",
-                  "assets/tender-workflow-2.png",
-                  "assets/tender-workflow-3.png"
+                  "assets/projects/construction-tender-management/tender-workflow-1.png",
+                  "assets/projects/construction-tender-management/tender-workflow-2.png",
+                  "assets/projects/construction-tender-management/tender-workflow-3.png"
                 ]
               }
             },
@@ -1318,15 +1339,15 @@
                 }
               ],
               "figure": {
-                "src": "assets/tender-roles-1.png",
+                "src": "assets/projects/construction-tender-management/tender-roles-1.png",
                 "alt": {
                   "en": "Role-based tender experience",
                   "ru": "Ролевой опыт в тендере"
                 },
                 "slides": [
-                  "assets/tender-roles-1.png",
-                  "assets/tender-roles-2.png",
-                  "assets/tender-roles-3.png"
+                  "assets/projects/construction-tender-management/tender-roles-1.png",
+                  "assets/projects/construction-tender-management/tender-roles-2.png",
+                  "assets/projects/construction-tender-management/tender-roles-3.png"
                 ]
               }
             },
@@ -1342,18 +1363,18 @@
                 }
               ],
               "figure": {
-                "src": "assets/tender-evaluation-1.png",
+                "src": "assets/projects/construction-tender-management/tender-evaluation-1.png",
                 "alt": {
                   "en": "Contractor evaluation",
                   "ru": "Оценка подрядчиков"
                 },
                 "slides": [
-                  "assets/tender-evaluation-1.png",
-                  "assets/tender-evaluation-2.png",
-                  "assets/tender-evaluation-3.png",
-                  "assets/tender-evaluation-4.png",
-                  "assets/tender-evaluation-5.png",
-                  "assets/tender-evaluation-6.png"
+                  "assets/projects/construction-tender-management/tender-evaluation-1.png",
+                  "assets/projects/construction-tender-management/tender-evaluation-2.png",
+                  "assets/projects/construction-tender-management/tender-evaluation-3.png",
+                  "assets/projects/construction-tender-management/tender-evaluation-4.png",
+                  "assets/projects/construction-tender-management/tender-evaluation-5.png",
+                  "assets/projects/construction-tender-management/tender-evaluation-6.png"
                 ]
               }
             }
