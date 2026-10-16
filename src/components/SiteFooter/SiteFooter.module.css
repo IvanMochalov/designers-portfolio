@@ -9,9 +9,14 @@
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: minmax(0, 560px) 264px minmax(0, 1fr);
-  gap: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 64px;
+}
+
+.brand {
+  min-width: 0;
 }
 
 .wordmark {
@@ -80,12 +85,6 @@
   .grid a,
   .copy {
     transition: color 0.25s ease;
-  }
-}
-
-@media (max-width: 960px) {
-  .grid {
-    grid-template-columns: minmax(0, 1.6fr) minmax(140px, 0.9fr) minmax(0, 1fr);
   }
 }
 
