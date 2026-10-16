@@ -9,9 +9,10 @@
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: minmax(0, 560px) minmax(0, 264px) auto;
-  gap: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 64px;
 }
 
 .brand {
@@ -84,12 +85,6 @@
   .grid a,
   .copy {
     transition: color 0.25s ease;
-  }
-}
-
-@media (max-width: 960px) {
-  .grid {
-    grid-template-columns: minmax(0, 1.6fr) minmax(140px, 0.9fr) minmax(0, 1fr);
   }
 }
 
