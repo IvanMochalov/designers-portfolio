@@ -10,7 +10,9 @@ function AboutPage() {
   return (
     <main>
       <section className="about-intro">
-        <img src={assetUrl(about.portrait)} alt={about.portraitAlt} />
+        <div className="about-portrait">
+          <img src={assetUrl(about.portrait)} alt={about.portraitAlt} />
+        </div>
         <div className="prose">
           <h2 className="split-title">
             <span>{about.heading}</span>

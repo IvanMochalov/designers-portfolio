@@ -198,11 +198,19 @@ button, a { font: inherit; color: inherit; }
   border-bottom: 1px solid #e8eaed;
 }
 
-.about-intro img {
+.about-portrait {
+  position: relative;
+  min-height: 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.about-portrait img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
 }
 
 .prose h2 { margin-bottom: 40px; }
@@ -562,7 +570,7 @@ button, a { font: inherit; color: inherit; }
     padding-top: 0;
   }
   .about-intro { grid-template-columns: 196px 1fr; gap: 40px; align-items: start; }
-  .about-intro img { width: 196px; height: 287px; }
+  .about-portrait { width: 196px; height: 287px; }
   .values, .path-grid, .points { grid-template-columns: 1fr 1fr; }
   .page:has(.case-column) { padding-top: 0; }
 }
@@ -585,7 +593,7 @@ button, a { font: inherit; color: inherit; }
   .path-grid,
   .tools { grid-template-columns: 1fr; }
 
-  .about-intro img { width: 100%; height: auto; aspect-ratio: 350 / 465; min-height: 0; }
+  .about-portrait { width: 100%; height: auto; aspect-ratio: 350 / 465; }
 
   .jobs article { grid-template-columns: 1fr; gap: 20px; }
   .jobs h2 { flex-direction: column; gap: 0; }
