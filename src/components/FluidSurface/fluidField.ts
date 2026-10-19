@@ -80,11 +80,31 @@ export function addSplat(
       const side = Math.max(-1, Math.min(1, offsetX * sideX + offsetY * sideY));
       const pink = Math.max(0, -side);
       const cyan = Math.max(0, side);
-      const core = 1 - Math.abs(side);
+      const core = Math.max(0, 1 - Math.abs(side));
       const ink = weight * dye;
       field.r[index] = Math.min(MAX_DYE, (field.r[index] ?? 0) + (core * 0.55 + pink + cyan * 0.2) * ink);
       field.g[index] = Math.min(MAX_DYE, (field.g[index] ?? 0) + (core * 0.62 + pink * 0.25 + cyan * 0.95) * ink);
       field.b[index] = Math.min(MAX_DYE, (field.b[index] ?? 0) + (core * 0.85 + pink * 0.7 + cyan) * ink);
+    }
+  }
+  const trail = 0.85;
+  const peachRadius = radius * 0.72;
+  const px = cx - (pushX / across) * radius * trail;
+  const py = cy - (pushY / across) * radius * trail;
+  const peachReach = Math.ceil(peachRadius);
+  const peachX0 = Math.max(0, Math.floor(px - peachReach));
+  const peachX1 = Math.min(field.width - 1, Math.ceil(px + peachReach));
+  const peachY0 = Math.max(0, Math.floor(py - peachReach));
+  const peachY1 = Math.min(field.height - 1, Math.ceil(py + peachReach));
+  for (let y = peachY0; y <= peachY1; y += 1) {
+    for (let x = peachX0; x <= peachX1; x += 1) {
+      const dist = Math.hypot((x - px) / peachRadius, (y - py) / peachRadius);
+      if (dist >= 1) continue;
+      const ink = (1 - dist) ** 2 * dye;
+      const index = y * field.width + x;
+      field.r[index] = Math.min(MAX_DYE, (field.r[index] ?? 0) + ink);
+      field.g[index] = Math.min(MAX_DYE, (field.g[index] ?? 0) + ink * 0.48);
+      field.b[index] = Math.min(MAX_DYE, (field.b[index] ?? 0) + ink * 0.16);
     }
   }
 }

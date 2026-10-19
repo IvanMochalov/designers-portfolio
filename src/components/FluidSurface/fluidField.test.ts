@@ -20,6 +20,22 @@ describe("background trail", () => {
     expect(pixels[3]).toBe(0);
   });
 
+  it("leaves a peach wake behind the pointer", () => {
+    const field = createFluid(16, 16);
+    const pixels = new Uint8ClampedArray(16 * 16 * 4);
+    addSplat(field, 0.5, 0.5, 3, 0, 2);
+    writeDye(field, pixels, 1, 0.42);
+    const colorAt = (x: number, y: number) => {
+      const offset = (y * 16 + x) * 4;
+      return [pixels[offset] ?? 0, pixels[offset + 1] ?? 0, pixels[offset + 2] ?? 0];
+    };
+    const wake = colorAt(6, 8);
+    const lead = colorAt(9, 8);
+    expect(wake[0]).toBeGreaterThan(wake[1]);
+    expect(wake[1]).toBeGreaterThan(wake[2]);
+    expect(wake[0] - wake[2]).toBeGreaterThan(lead[0] - lead[2] + 24);
+  });
+
   it("lets the trail fade after the pointer stops", () => {
     const field = createFluid(20, 20);
     addSplat(field, 0.5, 0.5, 2, 0, 3);
