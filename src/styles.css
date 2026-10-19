@@ -128,11 +128,13 @@ button, a { font: inherit; color: inherit; }
   display: block;
 }
 
-.button:hover .button-icon,
-.button:focus-visible .button-icon {
-  width: 16px;
-  margin-left: 10px;
-  opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+  .button:hover .button-icon,
+  .button:focus-visible .button-icon {
+    width: 16px;
+    margin-left: 10px;
+    opacity: 1;
+  }
 }
 
 .button:focus-visible {
@@ -529,9 +531,11 @@ button, a { font: inherit; color: inherit; }
       opacity 0.16s ease;
   }
 
-  .button-primary:hover .button-icon img,
-  .button-primary:focus-visible .button-icon img {
-    animation: star-spin 0.55s cubic-bezier(0.12, 0.7, 0.2, 1);
+  @media (hover: hover) and (pointer: fine) {
+    .button-primary:hover .button-icon img,
+    .button-primary:focus-visible .button-icon img {
+      animation: star-spin 0.55s cubic-bezier(0.12, 0.7, 0.2, 1);
+    }
   }
 }
 
