@@ -1,0 +1,39 @@
+name: Hosting
+
+on:
+  release:
+    types:
+      - released
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hosting
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.release.tag_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - name: Apache fallback for client routes
+        run: printf '%s\n' 'RewriteEngine On' 'RewriteRule ^index\.html$ - [L]' 'RewriteCond %{REQUEST_FILENAME} !-f' 'RewriteCond %{REQUEST_FILENAME} !-d' 'RewriteRule . /index.html [L]' > dist/.htaccess
+      - name: Upload the built site
+        uses: easingthemes/ssh-deploy@v5.1.0
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_HOST: server182.hosting.reg.ru
+          REMOTE_USER: u1877849
+          SOURCE: dist/
+          TARGET: /var/www/u1877849/data/www/ap4em.com/
+          ARGS: -rlgoDzvc -i --delete
