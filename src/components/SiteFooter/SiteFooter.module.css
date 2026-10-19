@@ -15,8 +15,26 @@
   gap: 64px;
 }
 
-.brand {
+.brand,
+.identity {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   min-width: 0;
+}
+
+.links,
+.contact {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .wordmark {
@@ -27,7 +45,7 @@
 
 .tagline {
   max-width: 440px;
-  margin: 12px 0;
+  margin: 0;
   color: #717880;
   font-size: 16px;
   line-height: 1.45;
@@ -42,17 +60,17 @@
 }
 
 .label {
-  margin: 0 0 16px;
+  margin: 0;
   color: #04111f;
   font-size: 12px;
   font-weight: 600;
   line-height: 1.5;
 }
 
-.grid a,
+.stack a,
 .copy {
   display: block;
-  margin: 0 0 10px;
+  margin: 0;
   padding: 0;
   border: 0;
   background: none;
@@ -61,10 +79,11 @@
   line-height: 1.5;
   text-align: left;
   text-decoration: none;
+  white-space: nowrap;
   cursor: pointer;
 }
 
-.grid a:hover,
+.stack a:hover,
 .copy:hover {
   color: #04111f;
 }
@@ -75,6 +94,11 @@
   padding-top: 4px;
 }
 
+.socials a {
+  display: block;
+  line-height: 0;
+}
+
 .socials img {
   width: 24px;
   height: 24px;
@@ -82,9 +106,23 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .grid a,
+  .stack a,
   .copy {
     transition: color 0.25s ease;
+  }
+}
+
+@media (max-width: 960px) {
+  .grid {
+    justify-content: flex-start;
+  }
+
+  .brand {
+    flex: 1 1 auto;
+  }
+
+  .tagline {
+    max-width: none;
   }
 }
 
@@ -98,8 +136,8 @@
   }
 
   .grid {
-    display: flex;
     flex-direction: column;
+    align-items: stretch;
     gap: 32px;
   }
 
@@ -107,25 +145,19 @@
     display: contents;
   }
 
-  .wordmark {
+  .identity {
     order: 1;
   }
 
-  .tagline {
-    order: 2;
-    max-width: none;
-  }
-
   .links {
-    order: 3;
+    order: 2;
   }
 
   .contact {
-    order: 4;
+    order: 3;
   }
 
   .copyright {
-    order: 5;
-    margin-top: 8px;
+    order: 4;
   }
 }
