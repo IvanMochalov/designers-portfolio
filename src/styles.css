@@ -108,6 +108,7 @@ button, a { font: inherit; color: inherit; }
   font-size: 14px;
   text-decoration: none;
   cursor: pointer;
+  text-align: center;
 }
 
 .button-primary { background: #04111f; color: #fcfcfc; }

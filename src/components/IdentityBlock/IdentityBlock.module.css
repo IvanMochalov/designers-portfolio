@@ -52,13 +52,3 @@
 .pdf {
   margin-left: auto;
 }
-
-@media (max-width: 720px) {
-  :global(.page:not(:has(#work))) .group {
-    display: none;
-  }
-
-  :global(.page:not(:has(#work)):not(:has(.jobs))) .actions {
-    display: none;
-  }
-}

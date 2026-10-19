@@ -1,4 +1,6 @@
 import { useNavigate, useRouterState } from "@tanstack/react-router";
+import resumeEn from "../../assets/resume/Resume_EN.pdf?url";
+import resumeRu from "../../assets/resume/Resume_RU.pdf?url";
 import { assetUrl } from "../../data/assets";
 import { projectsNewestFirst } from "../../data/content";
 import { useSite } from "../LocaleProvider/LocaleProvider";
@@ -6,7 +8,9 @@ import styles from "./IdentityBlock.module.css";
 
 export function IdentityBlock() {
   const navigate = useNavigate();
-  const { profile, ui, projects } = useSite().content;
+  const { locale, content } = useSite();
+  const { profile, ui, projects } = content;
+  const resume = locale === "ru" ? resumeRu : resumeEn;
   const chatHref =
     profile.social.find((item) => item.href.includes("t.me/"))?.href ?? `mailto:${profile.email}`;
   const latest = projectsNewestFirst(projects)[0];
@@ -37,7 +41,7 @@ export function IdentityBlock() {
           </a>
         </div>
         {showPdf ? (
-          <a className={`button button-secondary ${styles.pdf}`} href={`${import.meta.env.BASE_URL}resume.pdf`} download>
+          <a className={`button button-secondary ${styles.pdf}`} href={resume} download={locale === "ru" ? "Resume_RU.pdf" : "Resume_EN.pdf"}>
             {ui.pdfResume}
             <span className="button-icon" aria-hidden="true">
               <img src={assetUrl("assets/ui/download.svg")} alt="" />
