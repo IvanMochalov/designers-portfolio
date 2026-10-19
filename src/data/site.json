@@ -259,6 +259,46 @@
       "title": "Mobile view dashboard",
       "alt": "Mobile view dashboard",
       "src": "assets/experiments/iPhone14Pro-Mockup-05a.jpg"
+    },
+    {
+      "title": "Mail Composer",
+      "alt": "Mail Composer",
+      "src": "assets/experiments/Mail-Composer.jpg"
+    },
+    {
+      "title": "Notifications",
+      "alt": "Notifications",
+      "src": "assets/experiments/Notifications.jpg"
+    },
+    {
+      "title": "Profile card",
+      "alt": "Profile card",
+      "src": "assets/experiments/Profile-card.jpg"
+    },
+    {
+      "title": "Sharing workspace",
+      "alt": "Sharing workspace",
+      "src": "assets/experiments/Sharing-workspace.jpg"
+    },
+    {
+      "title": "Task list",
+      "alt": "Task list",
+      "src": "assets/experiments/Task-list.jpg"
+    },
+    {
+      "title": "Sidebar Menu",
+      "alt": "Sidebar Menu",
+      "src": "assets/experiments/Sidebar-Menu.jpg"
+    },
+    {
+      "title": "Transaction details",
+      "alt": "Transaction details",
+      "src": "assets/experiments/Transaction-details.jpg"
+    },
+    {
+      "title": "AI Copilot",
+      "alt": "AI Copilot",
+      "src": "assets/experiments/AI-Copilot.jpg"
     }
   ],
   "about": {
