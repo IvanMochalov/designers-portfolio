@@ -98,6 +98,7 @@
     backdrop-filter: none;
     overflow-x: auto;
     scrollbar-width: none;
+    scroll-behavior: smooth;
   }
 
   .nav > .menu::-webkit-scrollbar {
